@@ -59,25 +59,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../optimization/optimization_intro_to_optimization.html" rel="next">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../posts/optimization/optimization_intro_to_optimization.html" rel="next">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -106,17 +106,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Vahram’s Blog</span>
     </a>
   </div>
@@ -127,20 +127,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about.html" rel="" target="">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
- <span class="menu-text">Posts</span></a>
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.github.com/v-poghosyan" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/vahrampoghosyan/" rel="" target=""><i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Posts</li><li class="breadcrumb-item"><a href="../../posts/linear_algebra/linalg_intro_to_linear_algebra.html">Linear Algebra</a></li><li class="breadcrumb-item"><a href="../../posts/linear_algebra/linalg_intro_to_linear_algebra.html">Review of Linear Algebra and Geometry for ML</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
@@ -148,7 +170,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="quarto-title column-body">
       <h1 class="title">Review of Linear Algebra and Geometry for ML</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">linear algebra</div>
+                <div class="quarto-category">Linear Algebra</div>
               </div>
                   </div>
   </div>
@@ -176,6 +198,58 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Posts</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Linear Algebra</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/linear_algebra/linalg_intro_to_linear_algebra.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Review of Linear Algebra and Geometry for ML</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+ <span class="menu-text">Optimization</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/optimization/optimization_intro_to_optimization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Optimization for ML</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -205,12 +279,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
 
-<section id="review-of-linear-algebra-and-geometry" class="level1">
+<section id="review-of-linear-algebra-and-geometry" class="level1 page-columns page-full">
 <h1>Review of Linear Algebra and Geometry</h1>
 <p>We start our exploration of mathematics for machine learning with a refresher on convexity and, in general, the linear algebra that’s commonly used in the subject.</p>
 <section id="convexity" class="level2">
@@ -227,7 +301,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>However, <em>unions</em> of convex sets need not be convex.</p>
 </section>
 </section>
-<section id="examples-of-convex-sets" class="level2">
+<section id="examples-of-convex-sets" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="examples-of-convex-sets">Examples of Convex Sets</h2>
 <p>The following are some common convex sets we will come across in practice.</p>
 <section id="convex-hull-of-n-points" class="level3">
@@ -243,17 +317,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Note: A handy interactive visualization, along with an efficient algorithm that generates a convex hull of <span class="math inline">\(n\)</span> points on a 2D plane can be found in the following <a href="https://www.jgibson.id.au/articles/convex-hull/">blog post</a> by Joel Gibson. <br></p>
 </blockquote>
 </section>
-<section id="convex-hull-of-a-set" class="level3">
+<section id="convex-hull-of-a-set" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="convex-hull-of-a-set">Convex Hull of a Set</h3>
-<p>The convex hull of a set can be similarly defined as all the convex combinations of the elements in the set. However, since the set may contain infinite elements there’s an equivalent definition in terms of supersets.</p>
-<p>Let <span class="math inline">\(C\)</span> be a non-convex set. The convex hull of <span class="math inline">\(C\)</span> is the intersection of all convex supersets of <span class="math inline">\(C\)</span>. That is, it’s the intersection of all convex sets containing <span class="math inline">\(C\)</span>. The result of such an intersection will be the unique <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> smallest convex superset of <span class="math inline">\(C\)</span>, its cinvex hull.</p>
-<p>Visualizing the convex hull of a non-convex set is similar to visualizing that of <span class="math inline">\(n\)</span> points — it’s simply the shape enclosed by a rubber band stretched around the non-convex set.</p>
+<p>The convex hull of a set can be similarly defined as all the convex combinations of the elements in the set. However, since the set may contain infinite elements there’s an easier, equivalent definition in terms of supersets.</p>
+<p>Let <span class="math inline">\(C\)</span> be a non-convex set. The convex hull of <span class="math inline">\(C\)</span> is the intersection of all convex supersets of <span class="math inline">\(C\)</span>. That is, it’s the intersection of all convex sets containing <span class="math inline">\(C\)</span>. The result of such an intersection will be the unique <span class="math inline">\(^{(†)}\)</span> smallest convex superset of <span class="math inline">\(C\)</span>, its convex hull.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>() <strong>Proof of uniqueness:</strong> Let <span class="math inline">\(C_1\)</span> and <span class="math inline">\(C_2\)</span> be two convex hulls of <span class="math inline">\(C\)</span>. Let <span class="math inline">\(c_1 \in C_1\)</span> be a point. Since <span class="math inline">\(c_1 \in C_1\)</span>, <span class="math inline">\(c_1 \in\)</span> at least one of the convex supersets <span class="math inline">\(C^{i}\)</span>of <span class="math inline">\(C\)</span>. Hence, <span class="math inline">\(c_1 \in C_2\)</span> since <span class="math inline">\(C_2 = \bigcap^{i=1 \to n}C^{i}\)</span>. Similarly, it can be shown that any <span class="math inline">\(c_2 \in C_2\)</span> also belongs to <span class="math inline">\(C_1\)</span>. Hence, <span class="math inline">\(C_1 \subseteq C_2\)</span> and vice versa. This proves that <span class="math inline">\(C_1 = C_2\)</span> and, in doing so, completes this proof of uniqueness.</p>
+</div></div><p>Visualizing the convex hull of a non-convex set is similar to visualizing that of <span class="math inline">\(n\)</span> points — it’s simply the shape enclosed by a rubber band stretched around the non-convex set.</p>
 </section>
 <section id="affine-combination-of-n-points" class="level3">
 <h3 class="anchored" data-anchor-id="affine-combination-of-n-points">Affine Combination of <span class="math inline">\(n\)</span> Points</h3>
 <p>An <em>affine combination</em> of points <span class="math inline">\(x_1,...,x_n\)</span> is a point of the form <span class="math inline">\(x = \theta_1 x_1 + ... + \theta_n x_n\)</span> with <span class="math inline">\(\sum_{i=1}^{n}\theta_i = 1\)</span> but where the <span class="math inline">\(\theta_i\)</span>’s need not be non-negative.</p>
 <p>For a single point, the set of all affine combinations is the singleton set with the point itself. For two points, it’s the <em>line</em> that passes through them, and for three points it’s the <em>plane</em>. In general, it is the plane in <span class="math inline">\(n\)</span>-dimensions passing through the <span class="math inline">\(n\)</span> points.</p>
-<div class="cell" data-execution_count="4">
+<div class="cell" data-execution_count="7">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -337,7 +414,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id":"7c65328a75234699a9ad0183ce3dcba0","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+{"model_id":"c2a86d8c0dfd4da0ba8e87a30714bc49","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"e6ae7be422074cacaae0bf345aeded41","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
 </script>
 </div>
 </div>
@@ -356,7 +438,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="halfspaces" class="level4">
 <h4 class="anchored" data-anchor-id="halfspaces">Halfspaces</h4>
-<p>A <em>halfspace</em> is either of the two sub-spaces a hyperplane partitions the whole space into. Since the dot-product between vectors which are roughly in the same direction is positive, and vice versa, the two halfspaces associated to a hyperplane <span class="math inline">\(\{ x : a^T x = b\}\)</span> are <span class="math inline">\(\{ x : a^T x \geq b\}\)</span> and ${ x : a^T x b} $.</p>
+<p>A <em>halfspace</em> is either of the two sub-spaces a hyperplane partitions the whole space into. Since the dot-product between vectors which are roughly in the same direction is positive, and vice versa, the two halfspaces associated to a hyperplane <span class="math inline">\(\{ x : a^T x = b\}\)</span> are <span class="math inline">\(\{ x : a^T x \geq b\}\)</span> and <span class="math inline">\(\{ x : a^T x \leq b\}\)</span>.</p>
 </section>
 </section>
 <section id="conic-combinations-of-n-points" class="level3">
@@ -402,13 +484,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p><strong>Proof of uniqueness of the minimal, convex superset:</strong> Suppose <span class="math inline">\(C_1\)</span> and <span class="math inline">\(C_2\)</span> are both minimal, convex supersets of <span class="math inline">\(C\)</span>. But, any convex superset <span class="math inline">\(D\)</span> of <span class="math inline">\(C\)</span> must necessarily contain the minimal, convex superset. Hence, <span class="math inline">\(C_1 \subseteq C_2\)</span> and similarly <span class="math inline">\(C_2 \subseteq C_1\)</span>, which implies <span class="math inline">\(C_1 = C_2\)</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -757,11 +833,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<script src="https://utteranc.es/client.js" repo="v-poghosyan/blog" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../optimization/optimization_intro_to_optimization.html" class="pagination-link">
+      <a href="../../posts/optimization/optimization_intro_to_optimization.html" class="pagination-link">
         <span class="nav-page-text">Introduction to Optimization for ML</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -776,14 +854,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/">
+    <a class="nav-link" href="https://www.github.com/v-poghosyan">
       <i class="bi bi-github" role="img">
 </i> 
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/">
-      <i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/vahrampoghosyan/">
+      <i class="bi bi-linkedin" role="img">
 </i> 
     </a>
   </li>  

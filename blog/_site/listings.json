@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/linear_algebra/linalg_intro_to_linear_algebra.html",
       "/posts/optimization/optimization_intro_to_optimization.html"
     ]
   }

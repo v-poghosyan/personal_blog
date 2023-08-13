@@ -6,19 +6,19 @@ about:
   links:
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
+      href: https://www.linkedin.com/in/vahrampoghosyan/
     - icon: github
       text: Github
-      href: https://github.com
+      href: https://www.github.com/v-poghosyan
 page-layout: full
 sidebar: false
 ---
 
-Hello there 👋, I'm Vahram, a software engineer and graduate student of Computer Science at [UT Austin](https://www.utexas.edu/) with a deep-rooted passion for mathematics of machine learning and the applied sciences in general.
+Hello there 👋, I'm Vahram, a software engineer and graduate student of computer science at [UT Austin](https://www.utexas.edu/) with a deep-rooted passion for mathematics of machine learning and the applied sciences in general.
 
 This blog is where I write about the subjects that interest me. It's where I collect my notes and ideas on the web.
 
-I started it in late 2021 from some notes I took with [Jupyter](https://jupyter.org/). From there it was only a small effort to publish them via Fastpages, a blogging platform powered by Jekyll. In 2023, I migrated the blog from the now deprecated Fastpages to [Quarto](https://quarto.org/docs).
+I started it in late 2021 from some notes I took in [Jupyter Notebooks](https://jupyter.org/). From there it was only a small effort to publish them via Fastpages, a blogging platform powered by Jekyll. In 2023, I migrated the blog from the now deprecated Fastpages to [Quarto](https://quarto.org/docs).
 
 ::: {.callout-tip title="Disclaimer" appearance="minimal" collapse="true"}
 Everything in this blog, including the views I express, represent me — not the organization(s) I am affiliated with. 
@@ -26,18 +26,18 @@ Everything in this blog, including the views I express, represent me — not the
 
 ### 🎓 Education
 
-**University of Texas at Austin**
+🔹 **University of Texas at Austin**
 
 M.S in Computer Science | In progress
 
-**University of California, Los Angeles**
+🔹 **University of California, Los Angeles**
 
 B.S. in Applied Mathematics | 2020
 
 ### 💻 Experience
 
-**Capital One** | Software Engineer | Feb 2023 - Present
+🔸 **Capital One** | Software Engineer | Feb 2023 - Present
 
-**Capital One** | Software Intern | Jun 2022 - Aug 2022
+🔸 **Capital One** | Software Intern | Jun 2022 - Aug 2022
 
-**Omron Automation** | Software Intern | Aug 2015 - Feb 2017
+🔸 **Omron Automation** | Software Intern | Aug 2015 - Feb 2017

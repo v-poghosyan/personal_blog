@@ -3,40 +3,48 @@ project:
 
 website:
   title: "Vahram's Blog"
+  page-navigation: true
+  back-to-top-navigation: true
   navbar:
     background: primary
     search: true
     left:
-      - text: "About"
+      - text: About
         file: about.qmd
-      - text: "Posts"
+      - text: Blog
         file: index.qmd
-
+    right:
+      - icon: github
+        href: https://www.github.com/v-poghosyan
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/vahrampoghosyan/
+        aria-label: LinkedIn
 
   sidebar:
-    - style: "docked"
-      background: secondary
-      contents: 
-        - section: Linear Algebra
-          contents: linalg/*
-        - section: Optimization
-          contents: optimization/*
-
-
+    style: "docked"
+    theme:
+      light: [flatly, theme-light.scss]
+      dark: [flatly, theme-dark.scss]
+    contents: posts
+        
   page-footer: 
     left: "Copyright 2021, Vahram Poghosyan" 
     right: 
       - icon: github
-        href: https://github.com/
-      - icon: twitter 
-        href: https://twitter.com/ 
-
+        href: https://www.github.com/v-poghosyan
+      - icon: linkedin 
+        href: https://www.linkedin.com/in/vahrampoghosyan/
 
 format:
   html:
+    grid:
+      sidebar-width: 300px
+      margin-width: 250px
+      body-width: 900px
     theme:
-      light: flatly
-      dark: darkly
+      light: [flatly, theme-light.scss]
+      dark: [flatly, theme-dark.scss]
     toc: true
     css: styles.css
 
