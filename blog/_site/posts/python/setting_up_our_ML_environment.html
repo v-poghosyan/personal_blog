@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Vahram Poghosyan">
-<meta name="dcterms.date" content="2022-01-23">
+<meta name="dcterms.date" content="2023-10-28">
 
-<title>Vahram’s Blog - Introduction to Optimization for ML</title>
+<title>Vahram’s Blog - Setting Up a Local Dev Environment for Machine Learning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -31,8 +65,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../posts/python/NumPy_quick_start.html" rel="next">
-<link href="../../posts/neuroscience_notes/grief.html" rel="prev">
+<link href="../../posts/python/NumPy_quick_start.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -65,8 +98,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -108,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Posts</li><li class="breadcrumb-item"><a href="../../posts/optimization/optimization_intro_to_optimization.html">Optimization</a></li><li class="breadcrumb-item"><a href="../../posts/optimization/optimization_intro_to_optimization.html">Introduction to Optimization for ML</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Posts</li><li class="breadcrumb-item"><a href="../../posts/python/NumPy_quick_start.html">Python</a></li><li class="breadcrumb-item"><a href="../../posts/python/setting_up_our_ML_environment.html">Setting Up a Local Dev Environment for Machine Learning</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -118,9 +149,12 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Introduction to Optimization for ML</h1>
+      <div class="quarto-title-block"><div><h1 class="title">Setting Up a Local Dev Environment for Machine Learning</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="repo"><i class="bi"></i> Code</button></div></div>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Optimization</div>
+                <div class="quarto-category">Python</div>
+                <div class="quarto-category">Conda</div>
+                <div class="quarto-category">Quarto</div>
+                <div class="quarto-category">Machine Learning</div>
               </div>
                   </div>
   </div>
@@ -138,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 23, 2022</p>
+        <p class="date">October 28, 2023</p>
       </div>
     </div>
     
@@ -180,12 +214,29 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Neuroscience Notes</span></a>
+ <span class="menu-text">Machine Learning</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/machine_learning/convolutional_neural_nets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Convolutional Neural Networks</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Neuroscience Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../posts/neuroscience_notes/grief.html" class="sidebar-item-text sidebar-link">
@@ -196,16 +247,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
  <span class="menu-text">Optimization</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/optimization/optimization_intro_to_optimization.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../posts/optimization/optimization_intro_to_optimization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction to Optimization for ML</span></a>
   </div>
 </li>
@@ -213,13 +264,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
  <span class="menu-text">Python</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../posts/python/NumPy_quick_start.html" class="sidebar-item-text sidebar-link">
@@ -228,7 +279,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/python/setting_up_our_ML_environment.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/python/setting_up_our_ML_environment.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Setting Up a Local Dev Environment for Machine Learning</span></a>
   </div>
 </li>
@@ -246,11 +297,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction-to-optimization" id="toc-introduction-to-optimization" class="nav-link active" data-scroll-target="#introduction-to-optimization">Introduction to Optimization</a>
+  <li><a href="#python-and-conda-installation" id="toc-python-and-conda-installation" class="nav-link active" data-scroll-target="#python-and-conda-installation">Python and Conda Installation</a>
   <ul class="collapse">
-  <li><a href="#model-of-a-convex-optimization-problem" id="toc-model-of-a-convex-optimization-problem" class="nav-link" data-scroll-target="#model-of-a-convex-optimization-problem">Model of a Convex Optimization Problem</a></li>
-  <li><a href="#why-convex-optimization" id="toc-why-convex-optimization" class="nav-link" data-scroll-target="#why-convex-optimization">Why Convex Optimization?</a></li>
+  <li><a href="#installing-python---system-level" id="toc-installing-python---system-level" class="nav-link" data-scroll-target="#installing-python---system-level">Installing Python - System Level</a></li>
+  <li><a href="#why-use-conda" id="toc-why-use-conda" class="nav-link" data-scroll-target="#why-use-conda">Why use Conda</a>
+  <ul class="collapse">
+  <li><a href="#installing-anaconda-navigator-or-miniconda" id="toc-installing-anaconda-navigator-or-miniconda" class="nav-link" data-scroll-target="#installing-anaconda-navigator-or-miniconda">Installing Anaconda Navigator (or Miniconda)</a></li>
   </ul></li>
+  <li><a href="#choosing-the-right-python-kernel-in-vscode" id="toc-choosing-the-right-python-kernel-in-vscode" class="nav-link" data-scroll-target="#choosing-the-right-python-kernel-in-vscode">Choosing the Right Python Kernel in VSCode</a></li>
+  <li><a href="#initializing-conda-in-the-shell" id="toc-initializing-conda-in-the-shell" class="nav-link" data-scroll-target="#initializing-conda-in-the-shell">Initializing Conda in the Shell</a></li>
+  <li><a href="#conda-commands" id="toc-conda-commands" class="nav-link" data-scroll-target="#conda-commands">Conda Commands</a>
+  <ul class="collapse">
+  <li><a href="#comparing-conda-environments" id="toc-comparing-conda-environments" class="nav-link" data-scroll-target="#comparing-conda-environments">Comparing Conda Environments</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#installing-quarto-for-blogging-with-jupyter-notebooks-optional" id="toc-installing-quarto-for-blogging-with-jupyter-notebooks-optional" class="nav-link" data-scroll-target="#installing-quarto-for-blogging-with-jupyter-notebooks-optional">Installing Quarto for Blogging with Jupyter Notebooks (Optional)</a></li>
   </ul>
 </nav>
     </div>
@@ -260,25 +321,197 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="introduction-to-optimization" class="level1">
-<h1>Introduction to Optimization</h1>
-<p>Optimization can be viewed as the attempt to find those parameter(s), if such exist, that optimize (i.e.&nbsp;minimize or maximize) some objective function. The objective function can be almost anything — cost, profit, number of nodes in a wireless network, distance to a destination, a similarity measure between two images, etc. If the objective function describes cost we may wish to minimize it. If, on the other hand, it describes profit then it would suit us to maximize it.</p>
-<p>The problems of minimization and maximization, summed up as <em>optimization</em> in one word, are the same problem up to a reflection with respect to the axis (or domain) of the parameter(s). Formally, if the objective function is <span class="math inline">\(f: \mathbb{R^n} \to \mathbb{R}\)</span>, and it has a minimizer <span class="math inline">\(x^* \in \mathbb{R^n}\)</span>. Then, by definition of minimizer, <span class="math inline">\(f(x^*) \leq f(x) \ \ \forall x \in \mathbb{R^n}\)</span>. It follows that <span class="math inline">\(-f(x^*) \geq -f(x) \ \ \forall x \in \mathbb{R^n}\)</span>, so <span class="math inline">\(x^*\)</span> is a maximizer for <span class="math inline">\(-f\)</span>.</p>
-<section id="model-of-a-convex-optimization-problem" class="level2">
-<h2 class="anchored" data-anchor-id="model-of-a-convex-optimization-problem">Model of a Convex Optimization Problem</h2>
-<p>This post is the first in a series of posts on optimization. In the series, we frame an optimization problem in this form:</p>
-<p><span class="math display">\[\textrm{minimize}: f(x)\]</span> <span class="math display">\[\textrm{subject to}: x \in \mathcal{X}\]</span></p>
-<p>where the <em>objective function</em> <span class="math inline">\(f\)</span> is a <em>convex function</em>, and the <em>constraint set</em> <span class="math inline">\(\mathcal{X}\)</span> is a <em>convex set</em>.</p>
-<p>We will not, however, go over the ways in which we can model a real-world problem as one of the given form in the first place. There are many creative ways of doing that, one of which you can read about in <a href="https://v-poghosyan.github.io/blog/optimization/combinatorics/applied%20mathematics/2022/02/09/Optimization-Robust-Linear-Programs-Modelling-Discrete-Failures.html">this post</a>.</p>
+<p>In this post we’ll be going over how to set up our local development environment for making machine learning applications and blogging about the process. This is my attempt at installing the required software packages on a Windows machine. I’ll do my best to keep things general but some of the steps will be Windows specific.</p>
+<section id="python-and-conda-installation" class="level1">
+<h1>Python and Conda Installation</h1>
+<p>Most systems these days come with Python pre-installed, however here are the steps to install Python from scratch.</p>
+<section id="installing-python---system-level" class="level2">
+<h2 class="anchored" data-anchor-id="installing-python---system-level">Installing Python - System Level</h2>
+<p>First, we download and install the latest version of Python for our OS from the <a href="https://www.python.org/downloads/">official website</a>.</p>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled" title="💡 Tip">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+💡 Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Make sure to tick the “add to PATH” box during the installation so that the path of the Python executible is added to our system’s <code>PATH</code> environment variable. The path in question, by default, is <code>~\AppData\Local\Programs\Python\Python311\python.exe</code></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important no-icon callout-titled" title="❌ Troubleshooting">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+❌ Troubleshooting
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If the command <code>python</code> is unrecognized on Windows after installation, try <code>py</code>. We should be able to issue the command <code>py</code> to invoke the Python interpreter. Running <code>py --version</code> should return the version number (e.g.&nbsp;<code>Python 3.11.5</code>)</p>
+</div>
+</div>
+</div>
 </section>
-<section id="why-convex-optimization" class="level2">
-<h2 class="anchored" data-anchor-id="why-convex-optimization">Why Convex Optimization?</h2>
-<p>First, let’s define the <em>size</em> of an optimization problem as the dimensionality of the parameter <span class="math inline">\(x\)</span> added to the number of the problem constraints.</p>
-<p>Convex optimization problems are a class of <em>easy</em> optimization problems — problems whose time and/or space complexity grows slowly with respect to problem size.</p>
-<p>These problems are general enough to capture many scenarios of interest, even some that do not fall strictly into the convex category, but specific enough to be solvable through generic algorithms and numerical methods.</p>
+<section id="why-use-conda" class="level2">
+<h2 class="anchored" data-anchor-id="why-use-conda">Why use Conda</h2>
+<p>While <code>pip</code> is Python’s built-in package manager and <code>venv</code> is its built-in virtual environment manager, we use Conda because it attempts to do more than what <code>pip</code> and <code>venv</code> try to accomplish do individually by extending support to library dependencies not written in Python.</p>
+<p>Occasionally, when a Conda distribution is not available, but an <a href="https://pypi.org/">PyPI</a> distribution exists, it makes sense to combine use of <code>conda</code> and <code>pip</code>. This is done by:</p>
+<ol type="1">
+<li>Installing <code>pip</code> within a Conda environment: <code>conda install pip</code></li>
+<li>Installing the required package from inside the active Conda environment: <code>pip install &lt;package_name&gt;</code></li>
+</ol>
+<p>This way, the packages do <em>not</em> go to the system-level Python’s packages directory <code>C:\Users\&lt;username&gt;\AppData\Local\Python\&lt;version&gt;\</code> (or <code>Roaming</code> instead of <code>Local</code>, if Python was installed only for a specific user on Windows). Instead, <code>pip</code> installs them in the Conda environment’s <code>C:\ProgramData\anaconda3\Lib\site-packages</code> (or similar) package directory. We can check each package, along with its installation destination by running <code>pip list -v</code>.</p>
+<section id="installing-anaconda-navigator-or-miniconda" class="level3">
+<h3 class="anchored" data-anchor-id="installing-anaconda-navigator-or-miniconda">Installing Anaconda Navigator (or Miniconda)</h3>
+<p>Next, download and install <a href="https://www.anaconda.com/download">Anaconda Navigator</a> (or Miniconda, which installs the Conda scientific package and Python environment manager without additional software and without the GUI navigator). This installation includes tools like Jupyter Notebooks, Spyder, PyCharm, and other scientific packages and IDEs.</p>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled" title="📖 Note">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📖 Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Anaconda’s built in Python distribution:</strong> Anaconda comes with its own latest Python version distribution (by default installed into path <code>c:\ProgramData\anaconda3\python.exe</code>). The installer will prompt us to select an option which enables third-party editors, such as VSCode, to recognize this Python distribution.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled" title="📖 Note">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📖 Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Different Python distributions can live on the same machine:</strong> Running <code>python --version</code> in the Anaconda Prompt returns <code>Python 3.11.4</code> as of the time of writing this, which is the version of Python that Conda installed in its <code>base</code> environment. Crucially, running <code>py --version</code>, even in the Anaconda Prompt, still returns <code>Python 3.11.5</code>, which is the system’s version of Python.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="choosing-the-right-python-kernel-in-vscode" class="level2">
+<h2 class="anchored" data-anchor-id="choosing-the-right-python-kernel-in-vscode">Choosing the Right Python Kernel in VSCode</h2>
+<p>In VSCode, we can open the <strong>Command Palette</strong> and run the command <strong>Notebook: Select Notebook Kernel</strong>. At first, this will prompt us to install the Jupyter and Python VSCode extensions. Once that’s done, we can rerun the command and select the Python kernel in the desired Conda environment (by default <code>base</code>).</p>
+</section>
+<section id="initializing-conda-in-the-shell" class="level2">
+<h2 class="anchored" data-anchor-id="initializing-conda-in-the-shell">Initializing Conda in the Shell</h2>
+<p>Before we can use the full capabilities of Conda in the terminal, we need to initialize it by running the command:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>conda init &lt;bash|powershell|tsh|...&gt; # Depending on the shell we're using</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Restart your terminal for changes to take hold.</p>
+<div class="callout callout-style-simple callout-important no-icon callout-titled" title="❌ Troubleshooting">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+❌ Troubleshooting
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>For Windows users, Powershell may throw the following error in trying to load the user profile: <code>execution of scripts is disabled on this system</code>. This is Powershell’s security measure against command hijacking, its way of enforcing control of execution and establishing identity. If this is the case, run <code>cmd.exe</code> as Administrator and execute command <code>powershell Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</code>. We should now see the active environment in parentheses (e.g.&nbsp;<code>base</code>) to the left of the input in Powershell.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="conda-commands" class="level2">
+<h2 class="anchored" data-anchor-id="conda-commands">Conda Commands</h2>
+<p>Some common Conda commands are:</p>
+<table class="table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>conda env list</code></td>
+<td>Shows all the Conda environments (the active environment is marked with *)</td>
+</tr>
+<tr class="even">
+<td><code>conda list</code></td>
+<td>Shows all ther packages installed in the currently active environment</td>
+</tr>
+<tr class="odd">
+<td><code>conda update --all</code></td>
+<td>Updates all packages in the active environment (frequently resolves <code>environment is inconsistent</code> errors)</td>
+</tr>
+<tr class="even">
+<td><code>conda info</code></td>
+<td>Shows, among other things, the directory where the environment is stored</td>
+</tr>
+<tr class="odd">
+<td><code>conda activate &lt;myenv&gt;</code></td>
+<td>Activate environment <code>&lt;myenv&gt;</code></td>
+</tr>
+<tr class="even">
+<td><code>conda deactivate</code></td>
+<td>Deactivates the currently active environment</td>
+</tr>
+<tr class="odd">
+<td><code>conda create --name &lt;myenv&gt;</code></td>
+<td>Create a new empty environment</td>
+</tr>
+<tr class="even">
+<td><code>conda create --name &lt;myenv&gt; --clone base</code></td>
+<td>Clone the base environment</td>
+</tr>
+<tr class="odd">
+<td><code>conda env export -f &lt;path/to/envfile.yml&gt;</code></td>
+<td>Export the package list of the active environment (e.g.&nbsp;<code>conda env export -f  /Users/&lt;username&gt;/Documents/MyFiles/personal-blog.yml</code>)</td>
+</tr>
+<tr class="even">
+<td><code>conda compare &lt;path/to/envfile.yml&gt;</code></td>
+<td>Compare the active environment to the exported file of another environment</td>
+</tr>
+<tr class="odd">
+<td><code>conda remove --name &lt;myenv&gt; --all</code></td>
+<td>Deletes the environment</td>
+</tr>
+</tbody>
+</table>
+<section id="comparing-conda-environments" class="level3">
+<h3 class="anchored" data-anchor-id="comparing-conda-environments">Comparing Conda Environments</h3>
+<p>Often we need to compare the packages between two environments. Here’s the workflow to do that:</p>
+<ol type="1">
+<li><p>Activate one of the environments using <code>activate</code></p></li>
+<li><p>Export its package list using <code>export</code> as a <code>.yml</code> file to a destination of our choice</p></li>
+<li><p>Activate the second environment</p></li>
+<li><p>Execute the <code>compare</code> command, providing the path to the <code>.yml</code> file created in the previous step</p></li>
+</ol>
+</section>
+</section>
+</section>
+<section id="installing-quarto-for-blogging-with-jupyter-notebooks-optional" class="level1">
+<h1>Installing Quarto for Blogging with Jupyter Notebooks (Optional)</h1>
+<p>This blog, as mentioned in its description, uses <a href="https://quarto.org/">Quarto</a> to create its static pages from Jupyter Notebooks. We can install Quarto from <a href="https://anaconda.org/conda-forge/quarto">Conda Forge</a> into our environment, but the support for the Conda distribution of Quarto seems to be lacking at the moment. Instead, we can install the Quarto CLI using the provided <a href="https://github.com/quarto-dev/quarto-cli/releases/download/v1.3.450/quarto-1.3.450-win.msi">installer</a>.</p>
+<p>Since Quarto freezes the output of the code blocks in Jupyter Noteboooks, we can run our notebooks locally in the <code>base</code> conda environment which has all the necessary scientific packages installed, then just use the globally installed Quarto CLI to preview, or publish our blog.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -476,6 +709,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
   function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
@@ -634,14 +918,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../posts/neuroscience_notes/grief.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Overcoming Grief</span>
+      <a href="../../posts/python/NumPy_quick_start.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">NumPy: Quick Start Guide</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../posts/python/NumPy_quick_start.html" class="pagination-link">
-        <span class="nav-page-text">NumPy: Quick Start Guide</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

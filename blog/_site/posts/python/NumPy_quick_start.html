@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Vahram Poghosyan">
-<meta name="dcterms.date" content="2022-01-23">
+<meta name="dcterms.date" content="2023-10-27">
 
-<title>Vahram’s Blog - Introduction to Optimization for ML</title>
+<title>Vahram’s Blog - NumPy: Quick Start Guide</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -31,8 +65,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../posts/python/NumPy_quick_start.html" rel="next">
-<link href="../../posts/neuroscience_notes/grief.html" rel="prev">
+<link href="../../posts/python/setting_up_our_ML_environment.html" rel="next">
+<link href="../../posts/optimization/optimization_intro_to_optimization.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -65,8 +99,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -108,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Posts</li><li class="breadcrumb-item"><a href="../../posts/optimization/optimization_intro_to_optimization.html">Optimization</a></li><li class="breadcrumb-item"><a href="../../posts/optimization/optimization_intro_to_optimization.html">Introduction to Optimization for ML</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Posts</li><li class="breadcrumb-item"><a href="../../posts/python/NumPy_quick_start.html">Python</a></li><li class="breadcrumb-item"><a href="../../posts/python/NumPy_quick_start.html">NumPy: Quick Start Guide</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -118,9 +150,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Introduction to Optimization for ML</h1>
+      <div class="quarto-title-block"><div><h1 class="title">NumPy: Quick Start Guide</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="repo"><i class="bi"></i> Code</button></div></div>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Optimization</div>
+                <div class="quarto-category">Python</div>
+                <div class="quarto-category">NumPy</div>
+                <div class="quarto-category">Machine Learning</div>
               </div>
                   </div>
   </div>
@@ -138,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 23, 2022</p>
+        <p class="date">October 27, 2023</p>
       </div>
     </div>
     
@@ -205,7 +239,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/optimization/optimization_intro_to_optimization.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../posts/optimization/optimization_intro_to_optimization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction to Optimization for ML</span></a>
   </div>
 </li>
@@ -222,7 +256,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/python/NumPy_quick_start.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/python/NumPy_quick_start.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">NumPy: Quick Start Guide</span></a>
   </div>
 </li>
@@ -246,10 +280,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction-to-optimization" id="toc-introduction-to-optimization" class="nav-link active" data-scroll-target="#introduction-to-optimization">Introduction to Optimization</a>
+  <li><a href="#quick-introduction-to-numpy" id="toc-quick-introduction-to-numpy" class="nav-link active" data-scroll-target="#quick-introduction-to-numpy">Quick Introduction to NumPy</a>
   <ul class="collapse">
-  <li><a href="#model-of-a-convex-optimization-problem" id="toc-model-of-a-convex-optimization-problem" class="nav-link" data-scroll-target="#model-of-a-convex-optimization-problem">Model of a Convex Optimization Problem</a></li>
-  <li><a href="#why-convex-optimization" id="toc-why-convex-optimization" class="nav-link" data-scroll-target="#why-convex-optimization">Why Convex Optimization?</a></li>
+  <li><a href="#pythons-built-in-data-types" id="toc-pythons-built-in-data-types" class="nav-link" data-scroll-target="#pythons-built-in-data-types">Python’s Built-In Data Types</a>
+  <ul class="collapse">
+  <li><a href="#arrays" id="toc-arrays" class="nav-link" data-scroll-target="#arrays">Arrays</a></li>
+  </ul></li>
+  <li><a href="#numpy-data-types" id="toc-numpy-data-types" class="nav-link" data-scroll-target="#numpy-data-types">NumPy Data Types</a>
+  <ul class="collapse">
+  <li><a href="#working-with-ndarrays" id="toc-working-with-ndarrays" class="nav-link" data-scroll-target="#working-with-ndarrays">Working with <code>ndarray</code>s</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -260,24 +300,173 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="introduction-to-optimization" class="level1">
-<h1>Introduction to Optimization</h1>
-<p>Optimization can be viewed as the attempt to find those parameter(s), if such exist, that optimize (i.e.&nbsp;minimize or maximize) some objective function. The objective function can be almost anything — cost, profit, number of nodes in a wireless network, distance to a destination, a similarity measure between two images, etc. If the objective function describes cost we may wish to minimize it. If, on the other hand, it describes profit then it would suit us to maximize it.</p>
-<p>The problems of minimization and maximization, summed up as <em>optimization</em> in one word, are the same problem up to a reflection with respect to the axis (or domain) of the parameter(s). Formally, if the objective function is <span class="math inline">\(f: \mathbb{R^n} \to \mathbb{R}\)</span>, and it has a minimizer <span class="math inline">\(x^* \in \mathbb{R^n}\)</span>. Then, by definition of minimizer, <span class="math inline">\(f(x^*) \leq f(x) \ \ \forall x \in \mathbb{R^n}\)</span>. It follows that <span class="math inline">\(-f(x^*) \geq -f(x) \ \ \forall x \in \mathbb{R^n}\)</span>, so <span class="math inline">\(x^*\)</span> is a maximizer for <span class="math inline">\(-f\)</span>.</p>
-<section id="model-of-a-convex-optimization-problem" class="level2">
-<h2 class="anchored" data-anchor-id="model-of-a-convex-optimization-problem">Model of a Convex Optimization Problem</h2>
-<p>This post is the first in a series of posts on optimization. In the series, we frame an optimization problem in this form:</p>
-<p><span class="math display">\[\textrm{minimize}: f(x)\]</span> <span class="math display">\[\textrm{subject to}: x \in \mathcal{X}\]</span></p>
-<p>where the <em>objective function</em> <span class="math inline">\(f\)</span> is a <em>convex function</em>, and the <em>constraint set</em> <span class="math inline">\(\mathcal{X}\)</span> is a <em>convex set</em>.</p>
-<p>We will not, however, go over the ways in which we can model a real-world problem as one of the given form in the first place. There are many creative ways of doing that, one of which you can read about in <a href="https://v-poghosyan.github.io/blog/optimization/combinatorics/applied%20mathematics/2022/02/09/Optimization-Robust-Linear-Programs-Modelling-Discrete-Failures.html">this post</a>.</p>
+<section id="quick-introduction-to-numpy" class="level1">
+<h1>Quick Introduction to NumPy</h1>
+<p>Perhaps the most important package for scientific computing included with Conda is NumPy. Let’s get a feel for what NumPy offers.</p>
+<section id="pythons-built-in-data-types" class="level2">
+<h2 class="anchored" data-anchor-id="pythons-built-in-data-types">Python’s Built-In Data Types</h2>
+<section id="arrays" class="level3">
+<h3 class="anchored" data-anchor-id="arrays">Arrays</h3>
+<p>A 1D array, or a <strong>vector</strong>, is a collection of scalars (usually, but not necessarily, of similar data type) in a contiguous chunk of computer memory. A 2D array, or a <strong>matrix</strong>, is a collection of vectors. A 3D array (or a higher dimensional array), also referred to as a <strong>tensor</strong>, is a collection of matrices.</p>
 </section>
-<section id="why-convex-optimization" class="level2">
-<h2 class="anchored" data-anchor-id="why-convex-optimization">Why Convex Optimization?</h2>
-<p>First, let’s define the <em>size</em> of an optimization problem as the dimensionality of the parameter <span class="math inline">\(x\)</span> added to the number of the problem constraints.</p>
-<p>Convex optimization problems are a class of <em>easy</em> optimization problems — problems whose time and/or space complexity grows slowly with respect to problem size.</p>
-<p>These problems are general enough to capture many scenarios of interest, even some that do not fall strictly into the convex category, but specific enough to be solvable through generic algorithms and numerical methods.</p>
+</section>
+<section id="numpy-data-types" class="level2">
+<h2 class="anchored" data-anchor-id="numpy-data-types">NumPy Data Types</h2>
+<p>NumPy exposes the <code>ndarray</code> type. This is a multidimensional, homogeneous array type (i.e.&nbsp;its elements are of the same data type) optimized for computing and indexed by a <strong>tuple</strong>. It offeres mathematical indexing (based on Boolean expressions) so that we don’t have to write inefficient loops. The terms vector, matrix, and tensor equally apply to <code>ndarray</code>s.</p>
+<p>To import NumPy, we can type:</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="working-with-ndarrays" class="level3">
+<h3 class="anchored" data-anchor-id="working-with-ndarrays">Working with <code>ndarray</code>s</h3>
+<section id="creating-ndarrays-arange-zero-one" class="level4">
+<h4 class="anchored" data-anchor-id="creating-ndarrays-arange-zero-one">Creating <code>ndarray</code>s (arange, zero, one)</h4>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>sequence_array <span class="op">=</span> np.arange(<span class="dv">10</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="bu">print</span>(sequence_array)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[0 1 2 3 4 5 6 7 8 9]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>zeros_array <span class="op">=</span> np.zeros((<span class="dv">3</span>,<span class="dv">4</span>),dtype<span class="op">=</span><span class="st">'int32'</span>)</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="bu">print</span>(zeros_array)</span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="bu">print</span>(zeros_array.dtype)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[0 0 0 0]
+ [0 0 0 0]
+ [0 0 0 0]]
+int32</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>ones_array <span class="op">=</span> np.ones((<span class="dv">3</span>,<span class="dv">2</span>))</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="bu">print</span>(ones_array)</span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="bu">print</span>(ones_array.dtype)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1. 1.]
+ [1. 1.]
+ [1. 1.]]
+float64</code></pre>
+</div>
+</div>
+</section>
+<section id="verifying-type" class="level4">
+<h4 class="anchored" data-anchor-id="verifying-type">Verifying Type</h4>
+<p>We can verify that the object we’re working with is, indeed, and <code>ndarray</code> by using the built-in Python <code>type</code> function.</p>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>array1 <span class="op">=</span> np.array([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>])</span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="bu">print</span>(<span class="st">'array1 type: '</span>, <span class="bu">type</span>(array1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array1 type:  &lt;class 'numpy.ndarray'&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="getting-the-shape" class="level4">
+<h4 class="anchored" data-anchor-id="getting-the-shape">Getting the Shape</h4>
+<p>The <strong>shape</strong> of an <code>ndarray</code> is in format <code>(x,y,...)</code> where <code>x</code> corresponds to the number <strong>rows</strong>, <code>y</code> corresponds to the number of <strong>columns</strong>, and so on.</p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="bu">print</span>(<span class="st">'array1 shape: '</span>, array1.shape)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array1 shape:  (3,)</code></pre>
+</div>
+</div>
+<p>Higher dimensional <code>ndarray</code>s take tuples of arrays as input:</p>
+<section id="contrived-example-of-a-multidimensional-ndarray" class="level5">
+<h5 class="anchored" data-anchor-id="contrived-example-of-a-multidimensional-ndarray">Contrived Example of a Multidimensional <code>ndarray</code></h5>
+<p>There is a subtle difference between a 1D array and a 2D array with a single column which is worth exploring.</p>
+<p>As we saw above, <code>array1</code> was of shape <code>(3,)</code>. Now let’s examine the shape of a similar <code>ndarray</code> instance.</p>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>array2 <span class="op">=</span> np.array([[<span class="dv">1</span>],[<span class="dv">2</span>],[<span class="dv">3</span>]])</span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="bu">print</span>(<span class="st">'array2 shape: '</span>, array2.shape)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array2 shape:  (3, 1)</code></pre>
+</div>
+</div>
+<p>As we can see, this one’s shape is <code>(3,1)</code>.</p>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled" title="📖 Note">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📖 Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>The shape <code>(3,)</code> means a 1D array with 3 elements, meanwhile the shape <code>(3,1)</code> means a 2D array with 3 rows and a single column.</p>
+</div>
+</div>
+</div>
+<p>Sometimes these differences are just superficial, or the result of data impurities. NumPy provides a method called <code>np.squeeze</code> which flattens the arrays by removing axes of length 1.</p>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="bu">print</span>(np.squeeze(array2).shape <span class="op">==</span> array1.shape)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>True</code></pre>
+</div>
+</div>
+</section>
+<section id="a-more-natural-example-of-a-multidimensional-ndarray" class="level5">
+<h5 class="anchored" data-anchor-id="a-more-natural-example-of-a-multidimensional-ndarray">A More Natural Example of a Multidimensional <code>ndarray</code></h5>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a>array3 <span class="op">=</span> np.array([[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>], </span>
+<span id="cb16-2"><a href="#cb16-2"></a>                  [<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>]])</span>
+<span id="cb16-3"><a href="#cb16-3"></a><span class="bu">print</span>(<span class="st">'array3 shape: '</span>, array3.shape)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array3 shape:  (2, 3)</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="getting-the-dimension" class="level4">
+<h4 class="anchored" data-anchor-id="getting-the-dimension">Getting the Dimension</h4>
+<p>To get the dimension, we use <code>ndarray.ndim</code>.</p>
+<div class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a><span class="bu">print</span>(array1.ndim, array2.ndim, array3.ndim)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1 2 2</code></pre>
+</div>
+</div>
+</section>
+<section id="getting-the-data-types-of-the-elements" class="level4">
+<h4 class="anchored" data-anchor-id="getting-the-data-types-of-the-elements">Getting the Data Types of The Elements</h4>
+<p><code>ndarray</code>s can include numeric types (int, unsigned int, float, complex), text types (string), and null. However, as mentioned above, <code>ndarrays</code> can’t include more than one data type. To get the data type of the elements, we use <code>ndarray.dtype</code>.</p>
+</section>
+<section id="reshape" class="level4">
+<h4 class="anchored" data-anchor-id="reshape">Reshape</h4>
+<p>We can reshape <code>ndarrays</code> where it makes sense. For example, we can reshape <code>array3</code>, of shape <code>(2,3)</code> into an array of shape <code>(3,2)</code>, <code>(6,1)</code>, or <code>(1,6)</code>.</p>
+<div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a><span class="bu">print</span>(array3)</span>
+<span id="cb20-2"><a href="#cb20-2"></a><span class="bu">print</span>(array3.shape)</span>
+<span id="cb20-3"><a href="#cb20-3"></a>array4 <span class="op">=</span> array3.reshape(<span class="dv">3</span>,<span class="dv">2</span>)</span>
+<span id="cb20-4"><a href="#cb20-4"></a><span class="bu">print</span>(array4)</span>
+<span id="cb20-5"><a href="#cb20-5"></a><span class="bu">print</span>(array4.shape)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1 2 3]
+ [4 5 6]]
+(2, 3)
+[[1 2]
+ [3 4]
+ [5 6]]
+(3, 2)</code></pre>
+</div>
+</div>
+<p>Providing the value <code>-1</code> for either row or column makes the reshape automatic across that dimension. For instance, instead of <code>array3.reshape(3,2)</code> we could say <code>array3.reshape(-1,2)</code> or <code>array3.reshape(3,-1)</code>. This would achieve the same effect.</p>
+<div class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a>a<span class="op">=</span>np.array([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>])</span>
+<span id="cb22-2"><a href="#cb22-2"></a>b<span class="op">=</span>np.array([<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>])</span>
+<span id="cb22-3"><a href="#cb22-3"></a>c<span class="op">=</span>np.stack((a,b), axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb22-4"><a href="#cb22-4"></a><span class="bu">print</span>(c.shape)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(3, 2)</code></pre>
+</div>
+</div>
 
 
+</section>
+</section>
 </section>
 </section>
 
@@ -476,6 +665,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
   function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
@@ -634,13 +874,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../posts/neuroscience_notes/grief.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Overcoming Grief</span>
+      <a href="../../posts/optimization/optimization_intro_to_optimization.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction to Optimization for ML</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../posts/python/NumPy_quick_start.html" class="pagination-link">
-        <span class="nav-page-text">NumPy: Quick Start Guide</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../posts/python/setting_up_our_ML_environment.html" class="pagination-link">
+        <span class="nav-page-text">Setting Up a Local Dev Environment for Machine Learning</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

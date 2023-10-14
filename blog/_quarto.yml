@@ -4,25 +4,21 @@ project:
 website:
   title: "Vahram's Blog"
   page-navigation: true
-  back-to-top-navigation: true
   navbar:
-    background: primary
+    background: secondary
     search: true
     left:
       - text: About
         file: about.qmd
       - text: Blog
         file: index.qmd
-    right:
-      - icon: github
-        href: https://www.github.com/v-poghosyan
-        aria-label: GitHub
-      - icon: linkedin
-        href: https://www.linkedin.com/in/vahrampoghosyan/
-        aria-label: LinkedIn
-
+        
   sidebar:
+  - title: "Posts"
     style: "docked"
+    collapse-level: 3
+    pinned: true
+    border: false
     theme:
       light: [flatly, theme-light.scss]
       dark: [flatly, theme-dark.scss]
@@ -33,15 +29,17 @@ website:
     right: 
       - icon: github
         href: https://www.github.com/v-poghosyan
+        aria-label: GitHub
       - icon: linkedin 
         href: https://www.linkedin.com/in/vahrampoghosyan/
+        aria-label: GitHub
 
 format:
   html:
     grid:
-      sidebar-width: 300px
-      margin-width: 250px
-      body-width: 900px
+      sidebar-width: 450px
+      margin-width: 350px
+      body-width: 1200px
     theme:
       light: [flatly, theme-light.scss]
       dark: [flatly, theme-dark.scss]
