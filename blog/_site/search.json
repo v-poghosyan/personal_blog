@@ -88,7 +88,7 @@
     "href": "index.html",
     "title": "Vahram's Blog",
     "section": "",
-    "text": "Overcoming Grief\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nSetting Up a Local Dev Environment for Machine Learning\n\n\n\n\n\n\n\nPython\n\n\nConda\n\n\nQuarto\n\n\nMachine Learning\n\n\n\n\n\n\n\n\n\n\n\nOct 28, 2023\n\n\nVahram Poghosyan\n\n\n\n\n\n\n  \n\n\n\n\nConvolutional Neural Networks\n\n\n\n\n\n\n\nImage Recognition\n\n\nMachine Learning\n\n\n\n\n\n\n\n\n\n\n\nOct 27, 2023\n\n\nVahram Poghosyan\n\n\n\n\n\n\n  \n\n\n\n\nNumPy: Quick Start Guide\n\n\n\n\n\n\n\nPython\n\n\nNumPy\n\n\nMachine Learning\n\n\n\n\n\n\n\n\n\n\n\nOct 27, 2023\n\n\nVahram Poghosyan\n\n\n\n\n\n\n  \n\n\n\n\nReview of Linear Algebra and Geometry for ML\n\n\n\n\n\n\n\nLinear Algebra\n\n\n\n\n\n\n\n\n\n\n\nJan 23, 2022\n\n\nVahram Poghosyan\n\n\n\n\n\n\n  \n\n\n\n\nIntroduction to Optimization for ML\n\n\n\n\n\n\n\nOptimization\n\n\n\n\n\n\n\n\n\n\n\nJan 23, 2022\n\n\nVahram Poghosyan\n\n\n\n\n\n\nNo matching items"
+    "text": "Set Up a Local Development Environment for ML\n\n\n\n\n\n\n\nPython\n\n\nConda\n\n\nQuarto\n\n\nMachine Learning\n\n\n\n\n\n\n\n\n\n\n\nOct 28, 2023\n\n\nVahram Poghosyan\n\n\n\n\n\n\n  \n\n\n\n\nConvolutional Neural Networks\n\n\n\n\n\n\n\nImage Recognition\n\n\nMachine Learning\n\n\n\n\n\n\n\n\n\n\n\nOct 27, 2023\n\n\nVahram Poghosyan\n\n\n\n\n\n\n  \n\n\n\n\nNumPy: Quick Start Guide\n\n\n\n\n\n\n\nPython\n\n\nNumPy\n\n\nMachine Learning\n\n\n\n\n\n\n\n\n\n\n\nOct 27, 2023\n\n\nVahram Poghosyan\n\n\n\n\n\n\n  \n\n\n\n\nReview of Linear Algebra and Geometry for ML\n\n\n\n\n\n\n\nLinear Algebra\n\n\n\n\n\n\n\n\n\n\n\nJan 23, 2022\n\n\nVahram Poghosyan\n\n\n\n\n\n\n  \n\n\n\n\nIntroduction to Optimization for ML\n\n\n\n\n\n\n\nOptimization\n\n\n\n\n\n\n\n\n\n\n\nJan 23, 2022\n\n\nVahram Poghosyan\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/optimization/optimization_intro_to_optimization.html",
@@ -114,7 +114,7 @@
   {
     "objectID": "posts/python/setting_up_our_ML_environment.html",
     "href": "posts/python/setting_up_our_ML_environment.html",
-    "title": "Setting Up a Local Dev Environment for Machine Learning",
+    "title": "Set Up a Local Development Environment for ML",
     "section": "",
     "text": "In this post we’ll be going over how to set up our local development environment for making machine learning applications and blogging about the process. This is my attempt at installing the required software packages on a Windows machine. I’ll do my best to keep things general but some of the steps will be Windows specific."
   },
@@ -135,21 +135,21 @@
   {
     "objectID": "posts/python/setting_up_our_ML_environment.html#choosing-the-right-python-kernel-in-vscode",
     "href": "posts/python/setting_up_our_ML_environment.html#choosing-the-right-python-kernel-in-vscode",
-    "title": "Setting Up a Local Dev Environment for Machine Learning",
+    "title": "Set Up a Local Development Environment for ML",
     "section": "Choosing the Right Python Kernel in VSCode",
     "text": "Choosing the Right Python Kernel in VSCode\nIn VSCode, we can open the Command Palette and run the command Notebook: Select Notebook Kernel. At first, this will prompt us to install the Jupyter and Python VSCode extensions. Once that’s done, we can rerun the command and select the Python kernel in the desired Conda environment (by default base)."
   },
   {
     "objectID": "posts/python/setting_up_our_ML_environment.html#initializing-conda-in-the-shell",
     "href": "posts/python/setting_up_our_ML_environment.html#initializing-conda-in-the-shell",
-    "title": "Setting Up a Local Dev Environment for Machine Learning",
+    "title": "Set Up a Local Development Environment for ML",
     "section": "Initializing Conda in the Shell",
     "text": "Initializing Conda in the Shell\nBefore we can use the full capabilities of Conda in the terminal, we need to initialize it by running the command:\nconda init &lt;bash|powershell|tsh|...&gt; # Depending on the shell we're using\nRestart your terminal for changes to take hold.\n\n\n\n\n\n\n❌ Troubleshooting\n\n\n\n\n\nFor Windows users, Powershell may throw the following error in trying to load the user profile: execution of scripts is disabled on this system. This is Powershell’s security measure against command hijacking, its way of enforcing control of execution and establishing identity. If this is the case, run cmd.exe as Administrator and execute command powershell Set-ExecutionPolicy RemoteSigned -Scope CurrentUser. We should now see the active environment in parentheses (e.g. base) to the left of the input in Powershell."
   },
   {
     "objectID": "posts/python/setting_up_our_ML_environment.html#conda-commands",
     "href": "posts/python/setting_up_our_ML_environment.html#conda-commands",
-    "title": "Setting Up a Local Dev Environment for Machine Learning",
+    "title": "Set Up a Local Development Environment for ML",
     "section": "Conda Commands",
     "text": "Conda Commands\nSome common Conda commands are:\n\n\n\n\n\n\n\nCommand\nDescription\n\n\n\n\nconda env list\nShows all the Conda environments (the active environment is marked with *)\n\n\nconda list\nShows all ther packages installed in the currently active environment\n\n\nconda update --all\nUpdates all packages in the active environment (frequently resolves environment is inconsistent errors)\n\n\nconda info\nShows, among other things, the directory where the environment is stored\n\n\nconda activate &lt;myenv&gt;\nActivate environment &lt;myenv&gt;\n\n\nconda deactivate\nDeactivates the currently active environment\n\n\nconda create --name &lt;myenv&gt;\nCreate a new empty environment\n\n\nconda create --name &lt;myenv&gt; --clone base\nClone the base environment\n\n\nconda env export -f &lt;path/to/envfile.yml&gt;\nExport the package list of the active environment (e.g. conda env export -f  /Users/&lt;username&gt;/Documents/MyFiles/personal-blog.yml)\n\n\nconda compare &lt;path/to/envfile.yml&gt;\nCompare the active environment to the exported file of another environment\n\n\nconda remove --name &lt;myenv&gt; --all\nDeletes the environment\n\n\n\n\nComparing Conda Environments\nOften we need to compare the packages between two environments. Here’s the workflow to do that:\n\nActivate one of the environments using activate\nExport its package list using export as a .yml file to a destination of our choice\nActivate the second environment\nExecute the compare command, providing the path to the .yml file created in the previous step"
   },
@@ -191,14 +191,14 @@
   {
     "objectID": "posts/python/setting_up_our_ML_environment.html#installing-python---system-level",
     "href": "posts/python/setting_up_our_ML_environment.html#installing-python---system-level",
-    "title": "Setting Up a Local Dev Environment for Machine Learning",
+    "title": "Set Up a Local Development Environment for ML",
     "section": "Installing Python - System Level",
     "text": "Installing Python - System Level\nFirst, we download and install the latest version of Python for our OS from the official website.\n\n\n\n\n\n\n💡 Tip\n\n\n\n\n\nMake sure to tick the “add to PATH” box during the installation so that the path of the Python executible is added to our system’s PATH environment variable. The path in question, by default, is ~\\AppData\\Local\\Programs\\Python\\Python311\\python.exe\n\n\n\n\n\n\n\n\n\n❌ Troubleshooting\n\n\n\n\n\nIf the command python is unrecognized on Windows after installation, try py. We should be able to issue the command py to invoke the Python interpreter. Running py --version should return the version number (e.g. Python 3.11.5)"
   },
   {
     "objectID": "posts/python/setting_up_our_ML_environment.html#why-use-conda",
     "href": "posts/python/setting_up_our_ML_environment.html#why-use-conda",
-    "title": "Setting Up a Local Dev Environment for Machine Learning",
+    "title": "Set Up a Local Development Environment for ML",
     "section": "Why use Conda",
     "text": "Why use Conda\nWhile pip is Python’s built-in package manager and venv is its built-in virtual environment manager, we use Conda because it attempts to do more than what pip and venv try to accomplish do individually by extending support to library dependencies not written in Python.\nOccasionally, when a Conda distribution is not available, but an PyPI distribution exists, it makes sense to combine use of conda and pip. This is done by:\n\nInstalling pip within a Conda environment: conda install pip\nInstalling the required package from inside the active Conda environment: pip install &lt;package_name&gt;\n\nThis way, the packages do not go to the system-level Python’s packages directory C:\\Users\\&lt;username&gt;\\AppData\\Local\\Python\\&lt;version&gt;\\ (or Roaming instead of Local, if Python was installed only for a specific user on Windows). Instead, pip installs them in the Conda environment’s C:\\ProgramData\\anaconda3\\Lib\\site-packages (or similar) package directory. We can check each package, along with its installation destination by running pip list -v.\n\nInstalling Anaconda Navigator (or Miniconda)\nNext, download and install Anaconda Navigator (or Miniconda, which installs the Conda scientific package and Python environment manager without additional software and without the GUI navigator). This installation includes tools like Jupyter Notebooks, Spyder, PyCharm, and other scientific packages and IDEs.\n\n\n\n\n\n\n📖 Note\n\n\n\n\n\nAnaconda’s built in Python distribution: Anaconda comes with its own latest Python version distribution (by default installed into path c:\\ProgramData\\anaconda3\\python.exe). The installer will prompt us to select an option which enables third-party editors, such as VSCode, to recognize this Python distribution.\n\n\n\n\n\n\n\n\n\n📖 Note\n\n\n\n\n\nDifferent Python distributions can live on the same machine: Running python --version in the Anaconda Prompt returns Python 3.11.4 as of the time of writing this, which is the version of Python that Conda installed in its base environment. Crucially, running py --version, even in the Anaconda Prompt, still returns Python 3.11.5, which is the system’s version of Python."
   },
@@ -222,5 +222,19 @@
     "title": "NumPy: Quick Start Guide",
     "section": "",
     "text": "NumPy exposes the ndarray type. This is a multidimensional, homogeneous array type (i.e. its elements are of the same data type) optimized for computing and indexed by a tuple. It offeres mathematical indexing (based on Boolean expressions) so that we don’t have to write inefficient loops. The terms vector, matrix, and tensor equally apply to ndarrays.\nTo import NumPy, we can type:\n\nimport numpy as np\n\n\n\n\n\n\nsequence_array = np.arange(10)\nprint(sequence_array)\n\n[0 1 2 3 4 5 6 7 8 9]\n\n\n\nzeros_array = np.zeros((3,4),dtype='int32')\nprint(zeros_array)\nprint(zeros_array.dtype)\n\n[[0 0 0 0]\n [0 0 0 0]\n [0 0 0 0]]\nint32\n\n\n\nones_array = np.ones((3,2))\nprint(ones_array)\nprint(ones_array.dtype)\n\n[[1. 1.]\n [1. 1.]\n [1. 1.]]\nfloat64\n\n\n\n\n\nWe can verify that the object we’re working with is, indeed, and ndarray by using the built-in Python type function.\n\narray1 = np.array([1,2,3])\nprint('array1 type: ', type(array1))\n\narray1 type:  &lt;class 'numpy.ndarray'&gt;\n\n\n\n\n\nThe shape of an ndarray is in format (x,y,...) where x corresponds to the number rows, y corresponds to the number of columns, and so on.\n\nprint('array1 shape: ', array1.shape)\n\narray1 shape:  (3,)\n\n\nHigher dimensional ndarrays take tuples of arrays as input:\n\n\nThere is a subtle difference between a 1D array and a 2D array with a single column which is worth exploring.\nAs we saw above, array1 was of shape (3,). Now let’s examine the shape of a similar ndarray instance.\n\narray2 = np.array([[1],[2],[3]])\nprint('array2 shape: ', array2.shape)\n\narray2 shape:  (3, 1)\n\n\nAs we can see, this one’s shape is (3,1).\n\n\n\n\n\n\n📖 Note\n\n\n\n\n\nThe shape (3,) means a 1D array with 3 elements, meanwhile the shape (3,1) means a 2D array with 3 rows and a single column.\n\n\n\nSometimes these differences are just superficial, or the result of data impurities. NumPy provides a method called np.squeeze which flattens the arrays by removing axes of length 1.\n\nprint(np.squeeze(array2).shape == array1.shape)\n\nTrue\n\n\n\n\n\n\narray3 = np.array([[1,2,3], \n                  [4,5,6]])\nprint('array3 shape: ', array3.shape)\n\narray3 shape:  (2, 3)\n\n\n\n\n\n\nTo get the dimension, we use ndarray.ndim.\n\nprint(array1.ndim, array2.ndim, array3.ndim)\n\n1 2 2\n\n\n\n\n\nndarrays can include numeric types (int, unsigned int, float, complex), text types (string), and null. However, as mentioned above, ndarrays can’t include more than one data type. To get the data type of the elements, we use ndarray.dtype.\n\n\n\nWe can reshape ndarrays where it makes sense. For example, we can reshape array3, of shape (2,3) into an array of shape (3,2), (6,1), or (1,6).\n\nprint(array3)\nprint(array3.shape)\narray4 = array3.reshape(3,2)\nprint(array4)\nprint(array4.shape)\n\n[[1 2 3]\n [4 5 6]]\n(2, 3)\n[[1 2]\n [3 4]\n [5 6]]\n(3, 2)\n\n\nProviding the value -1 for either row or column makes the reshape automatic across that dimension. For instance, instead of array3.reshape(3,2) we could say array3.reshape(-1,2) or array3.reshape(3,-1). This would achieve the same effect.\n\na=np.array([1,2,3])\nb=np.array([4,5,6])\nc=np.stack((a,b), axis=1)\nprint(c.shape)\n\n(3, 2)"
+  },
+  {
+    "objectID": "unpublished_posts/neuroscience_notes/grief.html",
+    "href": "unpublished_posts/neuroscience_notes/grief.html",
+    "title": "Overcoming Grief",
+    "section": "",
+    "text": "The same area of the brain lights up when we do spatial calculations, as when we do temporal ones, as when we calculate our attachment to a given person, animal, or a thing. This suggests that attachment consists of two brain processes, among possibly some others: spatial calculation of how to access a person, an animal, or a thing that is the object of our grief, and a temporal calculation of when we saw them last, or how soon we can access the object."
+  },
+  {
+    "objectID": "unpublished_posts/neuroscience_notes/grief.html#spatial-temporal-and-emotional-brain-activation",
+    "href": "unpublished_posts/neuroscience_notes/grief.html#spatial-temporal-and-emotional-brain-activation",
+    "title": "Overcoming Grief",
+    "section": "",
+    "text": "The same area of the brain lights up when we do spatial calculations, as when we do temporal ones, as when we calculate our attachment to a given person, animal, or a thing. This suggests that attachment consists of two brain processes, among possibly some others: spatial calculation of how to access a person, an animal, or a thing that is the object of our grief, and a temporal calculation of when we saw them last, or how soon we can access the object."
   }
 ]

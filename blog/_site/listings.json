@@ -2,7 +2,6 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/neuroscience_notes/grief.html",
       "/posts/python/setting_up_our_ML_environment.html",
       "/posts/machine_learning/convolutional_neural_nets.html",
       "/posts/python/NumPy_quick_start.html",
