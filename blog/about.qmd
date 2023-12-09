@@ -18,9 +18,9 @@ Hi, I'm Vahram
 
 Software engineer and graduate student of computer science at [UT Austin](https://www.utexas.edu/) with a passion for machine learning and the applied sciences in general.
 
-This blog is where I write about the subjects that interest me. It's where I collect my notes and ideas on the web.
+This blog is where I write about the subjects that interest me. It's where I collect my notes and ideas on the web. 
 
-I started it in late 2021 from some notes I took in [Jupyter Notebooks](https://jupyter.org/). From there it was only a small effort to publish them via Fastpages, a blogging platform powered by Github Pages and Jekyll. In 2023, I migrated the blog from the now deprecated Fastpages to [Quarto](https://quarto.org/docs).
+I started it in late 2021 from some notes I took in [Jupyter Notebooks](https://jupyter.org/). From there it was only a small effort to publish them via Fastpages, a blogging platform powered by Github Pages and Jekyll. In 2023, I migrated the blog from the now deprecated Fastpages to [Quarto](https://quarto.org/docs). In the spirit of learning AI, the post thumbnails are generated using DALL-E.  
 
 ### 🎓 Education
 
@@ -33,7 +33,3 @@ I started it in late 2021 from some notes I took in [Jupyter Notebooks](https://
 **Capital One** | Software Engineer  (Feb 2023 - Present) | Software Intern (Jun 2022 - Aug 2022)
 
 **Omron Automation** | Software Intern (Aug 2015 - Feb 2017)
-
-::: {.callout-tip title="⚠️ Disclaimer" appearance="minimal" collapse="false"}
-All views expressed are mine and represent me personally — not the organization(s) I am affiliated with. 
-:::

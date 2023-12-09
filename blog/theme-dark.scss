@@ -4,8 +4,13 @@
 // Base document colors
 $body-bg: #181818;
 $body-color: white;
-$link-color: #e68c33;
+$link-color: rgb(218, 128, 44);
 
 // Code blocks
-$code-color: #61e7e7;
-$code-block-bg-alpha: -.8;
+$code-color: #46bdbd;
+$code-block-bg-alpha: -.6;
+
+// Code blocks
+.sourceCode.numberSource {
+    background-color: #072227 !important;
+}

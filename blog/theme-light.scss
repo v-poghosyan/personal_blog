@@ -2,6 +2,206 @@
 
 /*-- scss:defaults --*/
 // Base document colors
-$bg-primary: #ecf0f1;
-$code-color: #843be4;
+$bg-primary: #EBE8E7;
+$code-color: #0A122A;
+$link-color: #F46036;
 
+// Title banner and navbar
+.navbar.navbar-expand-lg.navbar-dark {
+    background-color: #000000; 
+}
+
+a.nav-link .menu-text:hover {
+    color: #F46036;
+}
+
+#quarto-header {
+    background-color: #000000 !important;
+}
+
+nav.quarto-secondary-nav {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+.nav.quarto-page-breadcrumbs {
+    color: #EBE8E7;
+}
+
+.quarto-secondary-nav nav.quarto-page-breadcrumbs {
+    color: #EBE8E7 !important;
+}
+
+.quarto-secondary-nav nav.quarto-page-breadcrumbs ol.breadcrumb li.breadcrumb-item a {
+    color: #EBE8E7;
+}
+
+button.quarto-btn-toggle.btn {
+    color: #EBE8E7;
+}
+
+h1.title {
+    color: #000000;
+}
+
+.quarto-title-banner .quarto-title h1.title {
+    color: #EBE8E7 !important;
+}
+
+.quarto-title-banner .quarto-title .quarto-title-block h1.title {
+    color: #EBE8E7 !important;
+}
+
+.btn.code-tools-button {
+    border: 1px solid #EBE8E7 !important;
+    padding: 5px !important;
+    border-radius: 0.25em !important;
+}
+
+.btn.code-tools-button:hover {
+    background-color: #584c5a;
+}
+
+.navbar-title {
+    color: #EBE8E7;
+}
+
+.quarto-category {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.quarto-category:hover {
+    background-color: #584c5a;
+}
+
+// Title banner
+.quarto-title-banner.page-columns.page-full {
+    background-color: #807182;
+}
+
+// Page Body
+body {
+    background-color: #EBE8E7 !important;
+}
+
+#quarto-content {
+    background-color: #EBE8E7;
+}
+
+#title-block-header {
+    background-color: #EBE8E7;
+}
+
+blockquote.blockquote {
+    border-color: #072227;
+}
+
+blockquote.blockquote p {
+    color: #072227;
+}
+
+h2.anchored, .h2 {
+    border-color: #072227;
+}
+
+h3.anchored, .h3 {
+    border-color: #072227;
+}
+
+h4.anchored, .h4 {
+    border-color: #072227;
+}
+
+h5.anchored, .h5 {
+    border-color: #072227;
+}
+
+// Code blocks
+.sourceCode {
+    border-radius: 0.25em !important;
+    background-color: #d2ccd3 !important;
+}
+
+.sourceCode.cell-code {
+    border-radius: 0.25em !important;
+    background-color: #d2ccd3 !important;
+}
+
+.sourceCode.numberSource {
+    background-color: #d2ccd3 !important;
+}
+
+// Sidebar
+
+#quarto-sidebar {
+    background-color: #EBE8E7;
+}
+
+.sidebar-navigation a {
+    color: #000000 !important;
+}
+
+.sidebar-navigation a:hover {
+    color: #F46036 !important;
+}
+
+.sidebar nav[role=doc-toc]>ul a {
+    border-color: #072227 !important;
+}
+
+.sidebar nav[role=doc-toc]>ul a.active {
+    border-color: #F46036 !important;
+}
+
+// Bottom Nav
+
+a.pagination-link {
+    color: #072227 !important;
+}
+
+.nav-page a {
+    color: #072227;
+}
+
+// Callouts
+.callout.callout-style-simple.callout-tip.no-icon.callout-titled {
+    border-left-color: #FCA311;
+}
+
+.callout.callout-style-simple.callout-note.no-icon.callout-titled {
+    border-left-color: #488286;
+}
+
+.callout.callout-style-simple.callout-important.no-icon.callout-titled {
+    border-left-color: #F46036;
+}
+
+// Search Results
+.search-match {
+    background-color: #FCA311 !important;
+}
+
+.aa-DetachedOverlay li.aa-Item[aria-selected=true] .search-item, #quarto-search-results li.aa-Item[aria-selected=true] .search-item {
+    background-color: #000000 !important;
+}
+
+.aa-DetachedOverlay li.aa-Item[aria-selected=true] .search-item.search-result-more, .aa-DetachedOverlay li.aa-Item[aria-selected=true] .search-item .search-result-section, .aa-DetachedOverlay li.aa-Item[aria-selected=true] .search-item .search-result-text, .aa-DetachedOverlay li.aa-Item[aria-selected=true] .search-item .search-result-title-container, .aa-DetachedOverlay li.aa-Item[aria-selected=true] .search-item .search-result-text-container, #quarto-search-results li.aa-Item[aria-selected=true] .search-item.search-result-more, #quarto-search-results li.aa-Item[aria-selected=true] .search-item .search-result-section, #quarto-search-results li.aa-Item[aria-selected=true] .search-item .search-result-text, #quarto-search-results li.aa-Item[aria-selected=true] .search-item .search-result-title-container, #quarto-search-results li.aa-Item[aria-selected=true] .search-item .search-result-text-container {
+    background-color: #000000 !important;
+}
+
+// Footer
+.footer .nav-footer {
+    background-color: #000000 !important;
+}
+
+
+// Main Page Post List
+.no-anchor.listing-title:hover {
+    color: #F46036 !important;
+}
+
+// Main Page Categories
+.category:hover {
+    color: #F46036 !important;
+}
