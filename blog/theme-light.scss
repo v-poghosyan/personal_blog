@@ -4,15 +4,19 @@
 // Base document colors
 $bg-primary: #EBE8E7;
 $code-color: #0A122A;
-$link-color: #F46036;
+$link-color: #9B7EDE;
 
 // Title banner and navbar
+.navbar-title {
+    color: #FCA311 !important;
+}
+
 .navbar.navbar-expand-lg.navbar-dark {
-    background-color: #000000; 
+    background-color: #0A122A; 
 }
 
 a.nav-link .menu-text:hover {
-    color: #F46036;
+    color: #FCA311;
 }
 
 #quarto-header {
@@ -20,8 +24,8 @@ a.nav-link .menu-text:hover {
 }
 
 nav.quarto-secondary-nav {
-    background-color: #000000 !important;
-    border-color: #000000 !important;
+    background-color: #02060f !important;
+    border-color: #02060f !important;
 }
 
 .nav.quarto-page-breadcrumbs {
@@ -94,30 +98,34 @@ body {
 }
 
 blockquote.blockquote {
-    border-color: #072227;
+    border-color: #02060f;
 }
 
 blockquote.blockquote p {
-    color: #072227;
+    color: #02060f;
 }
 
 h2.anchored, .h2 {
-    border-color: #072227;
+    border-color: #02060f;
 }
 
 h3.anchored, .h3 {
-    border-color: #072227;
+    border-color: #02060f;
 }
 
 h4.anchored, .h4 {
-    border-color: #072227;
+    border-color: #02060f;
 }
 
 h5.anchored, .h5 {
-    border-color: #072227;
+    border-color: #02060f;
 }
 
 // Code blocks
+code {
+    background-color: #d2ccd3 !important;
+}
+
 .sourceCode {
     border-radius: 0.25em !important;
     background-color: #d2ccd3 !important;
@@ -143,25 +151,29 @@ h5.anchored, .h5 {
 }
 
 .sidebar-navigation a:hover {
-    color: #F46036 !important;
+    color: #9B7EDE !important;
 }
 
 .sidebar nav[role=doc-toc]>ul a {
-    border-color: #072227 !important;
+    border-color: #02060f !important;
 }
 
 .sidebar nav[role=doc-toc]>ul a.active {
-    border-color: #F46036 !important;
+    border-color: #9B7EDE !important;
 }
 
 // Bottom Nav
 
 a.pagination-link {
-    color: #072227 !important;
+    color: #02060f !important;
 }
 
 .nav-page a {
-    color: #072227;
+    color: #02060f;
+}
+
+.nav-page a:hover {
+    color: #9B7EDE !important;
 }
 
 // Callouts
@@ -190,18 +202,42 @@ a.pagination-link {
     background-color: #000000 !important;
 }
 
-// Footer
-.footer .nav-footer {
-    background-color: #000000 !important;
-}
-
-
 // Main Page Post List
 .no-anchor.listing-title:hover {
-    color: #F46036 !important;
+    color: #9B7EDE !important;
 }
 
 // Main Page Categories
 .category:hover {
-    color: #F46036 !important;
+    color: #9B7EDE !important;
+}
+
+// About Me Page
+.about-link {
+    color: #0A122A !important;
+    background-color: #EBE8E7 !important;
+    border-color: #0A122A !important;
+}
+
+.about-link:hover {
+    color: #9B7EDE !important;
+    background-color: #0A122A !important;
+    border-color: #9B7EDE !important;
+}
+
+// Footer
+.footer .nav-footer {
+    background-color: #0A122A !important;
+}
+
+.nav-footer-left {
+    color: #EBE8E7;
+}
+
+.nav-link .bi {
+    color: #EBE8E7;
+}
+
+.nav-link .bi:hover {
+    color: #9B7EDE;
 }
