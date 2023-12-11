@@ -87,6 +87,15 @@ h1.title {
     background-color: #584c5a;
 }
 
+div.quarto-post .listing-categories .listing-category {
+    color: #00B295 !important;
+    border-color: #00B295 !important;
+}
+
+div.quarto-post .listing-categories .listing-category:hover {
+    background-color: #d2ccd3 !important;
+}
+
 // Title banner
 .quarto-title-banner.page-columns.page-full {
     background-color: #807182;

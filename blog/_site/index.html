@@ -72,9 +72,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-date','listing-title','listing-authors','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -231,162 +231,161 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Python,Conda,Quarto,Machine Learning" data-listing-date-sort="1698476400000" data-listing-file-modified-sort="1702111386493" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
-<div class="thumbnail">
-<p><a href="./posts/python/setting_up_our_ML_environment.html"> <img src="./posts/python/python.png" class="thumbnail-image"> </a></p>
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
 </div>
-<div class="body">
-<a href="./posts/python/setting_up_our_ML_environment.html">
-<h3 class="no-anchor listing-title">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="Python,Conda,Quarto,Machine Learning" data-listing-date-sort="1698476400000" data-listing-file-modified-sort="1702111386493" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<a href="./posts/python/setting_up_our_ML_environment.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./posts/python/python.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Set Up a Local Development Environment for ML
-</h3>
-<div class="listing-subtitle">
-
+</h5>
+<div class="listing-reading-time card-text text-muted">
+5 min
 </div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
-Python
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Conda'); return false;">
-Conda
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Quarto'); return false;">
-Quarto
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
-Machine Learning
-</div>
-</div>
-<a href="./posts/python/setting_up_our_ML_environment.html">
-<div class="listing-description">
-In this post we’ll be going over how to set up our local development environment for making machine learning applications and blogging about the…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/python/setting_up_our_ML_environment.html">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Oct 28, 2023
 </div>
-<div class="listing-author">
-Vahram Poghosyan
 </div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Python,NumPy,Machine Learning" data-listing-date-sort="1698390000000" data-listing-file-modified-sort="1702111386490" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./posts/python/NumPy_quick_start.html"> <img src="./posts/python/numpy.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/python/NumPy_quick_start.html">
-<h3 class="no-anchor listing-title">
-NumPy: Quick Start Guide
-</h3>
-<div class="listing-subtitle">
 
+<table class="card-other-values">
+<tbody><tr>
+<td>
+authors
+</td>
+<td class="authors">
+</td>
+</tr>
+
+</tbody></table>
 </div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
-Python
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('NumPy'); return false;">
-NumPy
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
-Machine Learning
-</div>
-</div>
-<a href="./posts/python/NumPy_quick_start.html">
-<div class="listing-description">
-Perhaps the most important package for scientific computing included with Conda is NumPy. Let’s get a feel for what NumPy offers.
 </div>
 </a>
 </div>
-<div class="metadata">
-<a href="./posts/python/NumPy_quick_start.html">
+<div class="g-col-1" data-index="1" data-categories="Python,NumPy,Machine Learning" data-listing-date-sort="1698390000000" data-listing-file-modified-sort="1702111386490" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<a href="./posts/python/NumPy_quick_start.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./posts/python/numpy.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+NumPy: Quick Start Guide
+</h5>
+<div class="listing-reading-time card-text text-muted">
+3 min
+</div>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Oct 27, 2023
 </div>
-<div class="listing-author">
-Vahram Poghosyan
+</div>
+
+<table class="card-other-values">
+<tbody><tr>
+<td>
+authors
+</td>
+<td class="authors">
+</td>
+</tr>
+
+</tbody></table>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Optimization" data-listing-date-sort="1642924800000" data-listing-file-modified-sort="1702111386490" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/optimization/optimization_intro_to_optimization.html"> <img src="./posts/optimization/optimization.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/optimization/optimization_intro_to_optimization.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="2" data-categories="Optimization" data-listing-date-sort="1642924800000" data-listing-file-modified-sort="1702111386490" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<a href="./posts/optimization/optimization_intro_to_optimization.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./posts/optimization/optimization.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Introduction to Optimization for ML
-</h3>
-<div class="listing-subtitle">
-
+</h5>
+<div class="listing-reading-time card-text text-muted">
+2 min
 </div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Optimization'); return false;">
-Optimization
-</div>
-</div>
-<a href="./posts/optimization/optimization_intro_to_optimization.html">
-<div class="listing-description">
-Optimization can be viewed as the attempt to find those parameter(s), if such exist, that optimize (i.e.&nbsp;minimize or maximize) some objective function. The objective…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/optimization/optimization_intro_to_optimization.html">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jan 23, 2022
 </div>
-<div class="listing-author">
-Vahram Poghosyan
+</div>
+
+<table class="card-other-values">
+<tbody><tr>
+<td>
+authors
+</td>
+<td class="authors">
+</td>
+</tr>
+
+</tbody></table>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Linear Algebra" data-listing-date-sort="1642924800000" data-listing-file-modified-sort="1702111386486" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10">
-<div class="thumbnail">
-<p><a href="./posts/linear_algebra/linalg_intro_to_linear_algebra.html"> <img src="./posts/linear_algebra/linalg.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/linear_algebra/linalg_intro_to_linear_algebra.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="3" data-categories="Linear Algebra" data-listing-date-sort="1642924800000" data-listing-file-modified-sort="1702111386486" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10">
+<a href="./posts/linear_algebra/linalg_intro_to_linear_algebra.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./posts/linear_algebra/linalg.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Review of Linear Algebra and Geometry for ML
-</h3>
-<div class="listing-subtitle">
-
+</h5>
+<div class="listing-reading-time card-text text-muted">
+10 min
 </div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Linear Algebra'); return false;">
-Linear Algebra
-</div>
-</div>
-<a href="./posts/linear_algebra/linalg_intro_to_linear_algebra.html">
-<div class="listing-description">
-We start our exploration of mathematics for machine learning with a refresher on convexity and, in general, the linear algebra that’s commonly used in the subject.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/linear_algebra/linalg_intro_to_linear_algebra.html">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jan 23, 2022
 </div>
-<div class="listing-author">
-Vahram Poghosyan
+</div>
+
+<table class="card-other-values">
+<tbody><tr>
+<td>
+authors
+</td>
+<td class="authors">
+</td>
+</tr>
+
+</tbody></table>
+</div>
 </div>
 </a>
-</div>
 </div>
 </div>
 <div class="listing-no-matching d-none">

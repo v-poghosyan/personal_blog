@@ -85,6 +85,15 @@ h1.title {
     border-color: #FFFFFF;
 }
 
+div.quarto-post .listing-categories .listing-category {
+    color: #807182 !important;
+    border-color: #807182 !important;
+}
+
+div.quarto-post .listing-categories .listing-category:hover {
+    background-color: #060505 !important;
+}
+
 .quarto-category:hover {
     background-color: #584c5a;
 }
