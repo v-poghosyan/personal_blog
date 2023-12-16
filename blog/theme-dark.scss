@@ -234,6 +234,14 @@ a.pagination-link {
     border-bottom-color: #02060f !important;
 }
 
+.quarto-grid-item {
+    background-color: #272122 !important;
+}
+
+.quarto-grid-item:hover {
+    border: 1px solid #EF767A !important;
+}
+
 // Main Page Categories
 .category:hover {
     color: #EF767A !important;
