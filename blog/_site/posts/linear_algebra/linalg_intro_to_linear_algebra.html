@@ -9,7 +9,7 @@
 <meta name="author" content="Vahram Poghosyan">
 <meta name="dcterms.date" content="2022-01-23">
 
-<title>Vahram’s Blog - Review of Linear Algebra and Geometry for ML</title>
+<title>VP - Review of Linear Algebra and Geometry for ML</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -76,8 +76,11 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../profile.png" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Vahram’s Blog</span>
+    <span class="navbar-title">VP</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -231,7 +234,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#convexity" id="toc-convexity" class="nav-link" data-scroll-target="#convexity">Convexity</a>
   <ul class="collapse">
-  <li><a href="#some-operations-that-preserve-convexity" id="toc-some-operations-that-preserve-convexity" class="nav-link" data-scroll-target="#some-operations-that-preserve-convexity">Some Operations that Preserve Convexity</a></li>
+  <li><a href="#operations-that-preserve-convexity" id="toc-operations-that-preserve-convexity" class="nav-link" data-scroll-target="#operations-that-preserve-convexity">Operations that Preserve Convexity</a></li>
   </ul></li>
   <li><a href="#examples-of-convex-sets" id="toc-examples-of-convex-sets" class="nav-link" data-scroll-target="#examples-of-convex-sets">Examples of Convex Sets</a>
   <ul class="collapse">
@@ -257,17 +260,40 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="review-of-linear-algebra-and-geometry" class="level1 page-columns page-full">
 <h1>Review of Linear Algebra and Geometry</h1>
-<p>We start our exploration of mathematics for machine learning with a refresher on convexity and, in general, the linear algebra that’s commonly used in the subject.</p>
+<p>Let’s start exploring mathematics for machine learning with a refresher on convexity in optimization and the linear algebra that’s commonly used in the subject.</p>
 <section id="convexity" class="level2">
 <h2 class="anchored" data-anchor-id="convexity">Convexity</h2>
 <p>Set convexity is defined as follows:</p>
 <blockquote class="blockquote">
 <p><strong>Definition:</strong> &nbsp; A set <span class="math inline">\(C \subseteq \mathbb{R^d}\)</span> is <strong>convex</strong> if, for all points <span class="math inline">\(x_1,x_2 \in C\)</span> and any <span class="math inline">\(\theta \in [0,1]\)</span>, the point <span class="math inline">\(\theta x_1 + (1-\theta) x_2\)</span></p>
 </blockquote>
-<p>That is, a set is convex if the parametrized line segment between <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span>, any two points in the set, is also entirely within the set. <br></p>
-<section id="some-operations-that-preserve-convexity" class="level3">
-<h3 class="anchored" data-anchor-id="some-operations-that-preserve-convexity">Some Operations that Preserve Convexity</h3>
-<p>Scaling, skewing, and rotation (i.e.&nbsp;<em>linear transformations</em>) preserve convexity, as do <em>affine transformations</em> (i.e.&nbsp;shifting). Let the matrix <span class="math inline">\(A\)</span> define such a transformation, and <span class="math inline">\(b\)</span> be a shift vector. Then <span class="math inline">\(C' = \{Ax + b : x \in C \}\)</span> is convex provided that <span class="math inline">\(C\)</span> was convex.</p>
+<p>That is, a set is convex if the parametrized line segment between <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span>, any two points (or, more generally, vectors) in the set is also entirely inside the set. <br></p>
+<div id="fig-convexity" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-convex" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../../vector_assets/linear_algebra/convex.png" class="img-fluid figure-img" data-ref-parent="fig-convexity"></p>
+<figcaption class="figure-caption">(a) Convex</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-non-convex" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="../../vector_assets/linear_algebra/non_convex.png" class="img-fluid figure-img" data-ref-parent="fig-convexity"></p>
+<figcaption class="figure-caption">(b) Non-convex</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: Set A is convex, set B is non-convex</figcaption><p></p>
+</figure>
+</div>
+<section id="operations-that-preserve-convexity" class="level3">
+<h3 class="anchored" data-anchor-id="operations-that-preserve-convexity">Operations that Preserve Convexity</h3>
+<p>Scaling, skewing, and rotation (which can be thought of as <em>linear transformations</em>) preserve convexity as does shifting (an <em>affine transformation</em>). Let the matrix <span class="math inline">\(A\)</span> define such a transformation, and <span class="math inline">\(b\)</span> be a shift vector. Then <span class="math inline">\(C' = \{Ax + b : x \in C \}\)</span> is convex provided that <span class="math inline">\(C\)</span> was convex.</p>
 <p>An <em>intersection</em> of convex sets is also convex. That is, <span class="math inline">\(C' = \{ x : x \in C_1 \cap x \in C_2 \}\)</span> is convex provided that <span class="math inline">\(C_1\)</span> and <span class="math inline">\(C_2\)</span> were convex to begin with. The proof follows directly from the definition of intersection.</p>
 <p>However, <em>unions</em> of convex sets need not be convex.</p>
 </section>
@@ -278,8 +304,19 @@ ul.task-list li input[type="checkbox"] {
 <section id="convex-hull-of-n-points" class="level3">
 <h3 class="anchored" data-anchor-id="convex-hull-of-n-points">Convex Hull of <span class="math inline">\(n\)</span> Points</h3>
 <p>A <em>convex combination</em> of points <span class="math inline">\(x_1, ..., x_n\)</span> is a point of the form <span class="math inline">\(x = \theta_1 x_1 + ... + \theta_n x_n\)</span> where <span class="math inline">\(\sum_{i = 1}^{n} \theta_i = 1\)</span> and <span class="math inline">\(\theta_i \geq 0 \ \ \forall i\)</span>.</p>
-<p>Let <span class="math inline">\(x_1,x_2,...,x_n\)</span> be <span class="math inline">\(n\)</span> points in space. Their <em>convex hull</em> is the set of all points which can be written as some convex combination of them. Equivalently, by varying the <span class="math inline">\(\theta_i\)</span>’s we generate the convex hull as the set of all convex combinations of these points.</p>
-<p>The convex hull can be visualized as the closed polygon formed when a rubber band is stretched around the <span class="math inline">\(n\)</span> points. The convex hull of two points is the line segment joining them. That of three points is the polygon (complete with its inner region). In general, for <span class="math inline">\(n\)</span> points, the concept generalizes to an <span class="math inline">\(n\)</span>-dimensional polygon.</p>
+<p>Let <span class="math inline">\(x_1,x_2,...,x_n\)</span> be <span class="math inline">\(n\)</span> points in space. Their <em>convex hull</em> is the set of all points which can be written as some convex combination of them. By varying parameters <span class="math inline">\(\theta_i\)</span> we generate the convex hull as the set of all convex combinations of these points.</p>
+<div id="fig-convex-hull" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../vector_assets/linear_algebra/convex_hull.png" class="img-fluid figure-img" width="300"></p>
+<figcaption class="figure-caption">Convex hull</figcaption>
+</figure>
+</div>
+<figcaption class="figure-caption">Figure&nbsp;2: The convex hull can be visualized as the closed polygon formed when a rubber band is stretched around the <span class="math inline">\(n\)</span> points if we imagine the points as pegs sticking out of a peg board.</figcaption>
+</figure>
+</div>
+<p>The convex hull of two points is the line segment joining them. That of three points is the triangle whose vertices they form (complete with its inner region). In general, for <span class="math inline">\(n\)</span> points, the concept generalizes to an <span class="math inline">\(n\)</span>-dimensional polygon.</p>
 <p>Formally, the convex hull is the set <span class="math inline">\(\{ \theta_1 x_1 + ... + \theta_n x_n : \theta_1 + ... + \theta_n = 1 \ \ \textrm{and} \ \ \theta_i \geq 0 \ \ \forall i \}\)</span></p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled" title="Note">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
@@ -293,19 +330,29 @@ Note
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>A handy interactive visualization, along with an efficient algorithm that generates a convex hull of <span class="math inline">\(n\)</span> points on a 2D plane can be found in the following <a href="https://www.jgibson.id.au/articles/convex-hull/">blog post</a> by Joel Gibson.</p>
+<p>Several algorithms exist for generating convex hulls efficiently. The most popular one is Jarvis’s algorithm which simulates a rope wrapping around the leftmost point of the point set. More on that <a href="https://jeffe.cs.illinois.edu/teaching/compgeom/notes/14-convexhull.pdf">here</a>.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="convex-hull-of-a-set" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="convex-hull-of-a-set">Convex Hull of a Set</h3>
-<p>The convex hull of a set can be similarly defined as all the convex combinations of the elements in the set. However, since the set may contain infinite elements there’s an easier, equivalent definition in terms of supersets.</p>
+<p>The convex hull of a set can be similarly defined as all the convex combinations of the elements in the set. However, since the set may contain infinite elements, there’s an equivalent definition in terms of supersets.</p>
 <p>Let <span class="math inline">\(C\)</span> be a non-convex set. The convex hull of <span class="math inline">\(C\)</span> is the intersection of all convex supersets of <span class="math inline">\(C\)</span>. That is, it’s the intersection of all convex sets containing <span class="math inline">\(C\)</span>. The result of such an intersection will be the unique <span class="math inline">\(^{(†)}\)</span> smallest convex superset of <span class="math inline">\(C\)</span>, its convex hull.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>(†) <strong>Proof of uniqueness:</strong> Let <span class="math inline">\(C_1\)</span> and <span class="math inline">\(C_2\)</span> be two convex hulls of <span class="math inline">\(C\)</span>. Let <span class="math inline">\(c_1 \in C_1\)</span> be a point. Since <span class="math inline">\(c_1 \in C_1\)</span>, <span class="math inline">\(c_1 \in\)</span> at least one of the convex supersets <span class="math inline">\(C^{i}\)</span>of <span class="math inline">\(C\)</span>. Hence, <span class="math inline">\(c_1 \in C_2\)</span> since <span class="math inline">\(C_2 = \bigcap^{i=1 \to n}C^{i}\)</span>. Similarly, it can be shown that any <span class="math inline">\(c_2 \in C_2\)</span> also belongs to <span class="math inline">\(C_1\)</span>. Hence, <span class="math inline">\(C_1 \subseteq C_2\)</span> and vice versa. This proves that <span class="math inline">\(C_1 = C_2\)</span> and completes the proof of uniqueness.</p>
-</div></div><p>Visualizing the convex hull of a non-convex set is similar to visualizing that of <span class="math inline">\(n\)</span> points — it’s simply the shape enclosed by a rubber band stretched around the non-convex set.</p>
+</div></div><div id="fig-convex-hull" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../vector_assets/linear_algebra/convex_hull_set.png" class="img-fluid figure-img" width="300"></p>
+<figcaption class="figure-caption">Convex hull of a set</figcaption>
+</figure>
+</div>
+<figcaption class="figure-caption">Figure&nbsp;3: Visualizing the convex hull of a non-convex set is similar to visualizing that of <span class="math inline">\(n\)</span> points — it’s simply the shape enclosed by a rubber band stretched around the non-convex set.</figcaption>
+</figure>
+</div>
 </section>
 <section id="affine-combination-of-n-points" class="level3">
 <h3 class="anchored" data-anchor-id="affine-combination-of-n-points">Affine Combination of <span class="math inline">\(n\)</span> Points</h3>

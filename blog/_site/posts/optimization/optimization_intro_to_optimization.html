@@ -9,7 +9,7 @@
 <meta name="author" content="Vahram Poghosyan">
 <meta name="dcterms.date" content="2022-01-23">
 
-<title>Vahram’s Blog - Introduction to Optimization for ML</title>
+<title>VP - Introduction to Optimization for ML</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,8 +77,11 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../profile.png" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Vahram’s Blog</span>
+    <span class="navbar-title">VP</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -244,20 +247,19 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction-to-optimization" class="level1">
 <h1>Introduction to Optimization</h1>
-<p>Optimization can be viewed as the attempt to find those parameter(s), if such exist, that optimize (i.e.&nbsp;minimize or maximize) some objective function. The objective function can be almost anything — cost, profit, number of nodes in a wireless network, distance to a destination, a similarity measure between two images, etc. If the objective function describes cost we may wish to minimize it. If, on the other hand, it describes profit then it would suit us to maximize it.</p>
-<p>The problems of minimization and maximization, summed up as <em>optimization</em> in one word, are the same problem up to a reflection with respect to the axis (or domain) of the parameter(s). Formally, if the objective function is <span class="math inline">\(f: \mathbb{R^n} \to \mathbb{R}\)</span>, and it has a minimizer <span class="math inline">\(x^* \in \mathbb{R^n}\)</span>. Then, by definition of minimizer, <span class="math inline">\(f(x^*) \leq f(x) \ \ \forall x \in \mathbb{R^n}\)</span>. It follows that <span class="math inline">\(-f(x^*) \geq -f(x) \ \ \forall x \in \mathbb{R^n}\)</span>, so <span class="math inline">\(x^*\)</span> is a maximizer for <span class="math inline">\(-f\)</span>.</p>
+<p>An optimization problem can be viewed as the attempt to find those parameter(s), if such exist, that optimize (i.e.&nbsp;minimize or maximize) some objective function. The objective function can be almost anything — cost, profit, number of nodes in a wireless network, distance to a destination, a similarity measure between two images, etc. If the objective function describes cost we may wish to minimize it. If, on the other hand, it describes profit then it would suit us to maximize it.</p>
+<p>The problems of minimization and maximization, summed up as <em>optimization</em> in one word, are basically the same problem. Formally, if the objective function is <span class="math inline">\(f: \mathbb{R^n} \to \mathbb{R}\)</span>, and it has a minimizer <span class="math inline">\(x^* \in \mathbb{R^n}\)</span>. Then, by definition of minimizer, <span class="math inline">\(f(x^*) \leq f(x) \ \ \forall x \in \mathbb{R^n}\)</span>. It follows that <span class="math inline">\(-f(x^*) \geq -f(x) \ \ \forall x \in \mathbb{R^n}\)</span>, so <span class="math inline">\(x^*\)</span> is a maximizer for <span class="math inline">\(-f\)</span>, the reflected objective function.</p>
 <section id="model-of-a-convex-optimization-problem" class="level2">
 <h2 class="anchored" data-anchor-id="model-of-a-convex-optimization-problem">Model of a Convex Optimization Problem</h2>
-<p>This post is the first in a series of posts on optimization. In the series, we frame an optimization problem in this form:</p>
+<p>This post is the first in a series of posts on optimization. In this series, we frame an optimization problem in the following form:</p>
 <p><span class="math display">\[\textrm{minimize}: f(x)\]</span> <span class="math display">\[\textrm{subject to}: x \in \mathcal{X}\]</span></p>
 <p>where the <em>objective function</em> <span class="math inline">\(f\)</span> is a <em>convex function</em>, and the <em>constraint set</em> <span class="math inline">\(\mathcal{X}\)</span> is a <em>convex set</em>.</p>
-<p>We will not, however, go over the ways in which we can model a real-world problem as one of the given form in the first place. There are many creative ways of doing that, one of which you can read about in <a href="https://v-poghosyan.github.io/blog/optimization/combinatorics/applied%20mathematics/2022/02/09/Optimization-Robust-Linear-Programs-Modelling-Discrete-Failures.html">this post</a>.</p>
+<p>We will not go over the ways in which we can model a real-world problem as one in the given form. There are many creative ways of doing that, one of which you can read about in <a href="https://v-poghosyan.github.io/blog/optimization/combinatorics/applied%20mathematics/2022/02/09/Optimization-Robust-Linear-Programs-Modelling-Discrete-Failures.html">this post</a>.</p>
 </section>
 <section id="why-convex-optimization" class="level2">
 <h2 class="anchored" data-anchor-id="why-convex-optimization">Why Convex Optimization?</h2>
-<p>First, let’s define the <em>size</em> of an optimization problem as the dimensionality of the parameter <span class="math inline">\(x\)</span> added to the number of the problem constraints.</p>
-<p>Convex optimization problems are a class of <em>easy</em> optimization problems — problems whose time and/or space complexity grows slowly with respect to problem size.</p>
-<p>These problems are general enough to capture many scenarios of interest, even some that do not fall strictly into the convex category, but specific enough to be solvable through generic algorithms and numerical methods.</p>
+<p>First, let’s define the <em>size</em> of an optimization problem as: The dimensionality of the parameter <span class="math inline">\(x\)</span>, added to the number of the problem constraints.</p>
+<p>Convex optimization problems are a class of <em>easy</em> optimization problems — problems whose time and/or space complexity grows slowly with respect to problem size. These problems are general enough to capture many scenarios of interest, even some that do not fall strictly into the convex category, but specific enough to be solvable through generic algorithms and numerical methods.</p>
 
 
 </section>

@@ -1,6 +1,6 @@
 ---
 title: "About"
-image: profile.jpg
+image: profile.png
 about:
   template: trestles
   links:
@@ -16,7 +16,7 @@ sidebar: false
 
 Hi, I'm Vahram 
 
-Software engineer and graduate student of computer science at UT Austin with a passion for machine learning and the applied sciences in general.
+Software engineer and graduate student of computer science at UT Austin with a passion for machine learning and the applied sciences and math in general.
 
 ### 🎓 Education
 
@@ -34,4 +34,4 @@ Software engineer and graduate student of computer science at UT Austin with a p
 
 This blog is where I write about the subjects that interest me. It's where I collect my notes and ideas on the web. I started it in late 2021 from some notes I took in Jupyter Notebooks. 
 
-Most of the content will be centered around learning AI, however I will expand into other subject areas as well. In the spirit of AI, the thumbnails of the blog posts and my profile picture are generated using DALL-E.
+Most of the content will be centered around learning machine learning, however I will expand into other subject areas as well. In the spirit of AI and for the scalability of this blog, the thumbnails of the posts and my profile picture are generated using DALL-E.
