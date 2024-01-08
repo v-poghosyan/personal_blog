@@ -12,19 +12,20 @@ $link-color: #EF767A;
 }
 
 .navbar-title:hover {
-    color: #FCA311 !important;
+    color: #EF767A !important;
 }
 
 .aa-DetachedSearchButtonIcon svg:hover {
-    color: #FCA311 !important;
+    color: #EF767A !important;
 }
 
 .navbar.navbar-expand-lg.navbar-dark {
-    background-color: #0A122A; 
+    background-color: #0A122A;
+    border-bottom: 1px solid #00B295;
 }
 
 a.nav-link .menu-text:hover {
-    color: #FCA311;
+    color: #EF767A;
 }
 
 #quarto-header {
@@ -72,10 +73,11 @@ h1.title {
     border: 1px solid #EBE8E7 !important;
     padding: 5px !important;
     border-radius: 0.25em !important;
+    opacity: 100%;
 }
 
 .btn.code-tools-button:hover {
-    background-color: #584c5a;
+    background-color: #7f2d7a;
 }
 
 .quarto-category {
@@ -84,7 +86,7 @@ h1.title {
 }
 
 .quarto-category:hover {
-    background-color: #584c5a;
+    background-color: #7f2d7a;
 }
 
 div.quarto-post .listing-categories .listing-category {
@@ -98,7 +100,7 @@ div.quarto-post .listing-categories .listing-category:hover {
 
 // Title banner
 .quarto-title-banner.page-columns.page-full {
-    background-color: #807182;
+    background-color: #a2539d;
 }
 
 // Page Body
@@ -208,7 +210,7 @@ a.pagination-link {
 
 // Search Results
 .search-match {
-    background-color: #FCA311 !important;
+    background-color: #00B295 !important;
 }
 
 .aa-DetachedOverlay li.aa-Item[aria-selected=true] .search-item, #quarto-search-results li.aa-Item[aria-selected=true] .search-item {
@@ -252,6 +254,7 @@ a.pagination-link {
 // Footer
 .footer .nav-footer {
     background-color: #0A122A !important;
+    border-top-color: #00B295 !important;
 }
 
 .nav-footer-left {
