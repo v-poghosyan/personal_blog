@@ -2,10 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/python/setting_up_our_ML_environment.html",
-      "/posts/python/NumPy_quick_start.html",
-      "/posts/optimization/optimization_intro_to_optimization.html",
-      "/posts/linear_algebra/linalg_intro_to_linear_algebra.html"
+      "/posts/optimization/introduction_to_optimization.html",
+      "/posts/linear_algebra/linear_algebra_refresher_for_optimization.html"
     ]
   }
 ]

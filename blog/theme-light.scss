@@ -103,6 +103,10 @@ div.quarto-post .listing-categories .listing-category:hover {
     background-color: #22878e;
 }
 
+.quarto-title-banner .quarto-title h1.title, .quarto-title-banner .quarto-title .title.h1 {
+    color: #edf2d0 !important;
+}
+
 // Page Body
 body {
     background-color: #EBE8E7 !important;
@@ -249,6 +253,14 @@ a.pagination-link {
 .about-link:hover {
     color: #EF767A !important;
     border-color: #EF767A !important;
+}
+
+// Images
+.figure-img {
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
 }
 
 // Footer
